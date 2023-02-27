@@ -1,16 +1,15 @@
-
 header {
-    background-color: #04724d;
-  }
-  
-  /* logos header */
-  .container-fluid.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 7.3vh;
-  }
-      
+  background-color: #04724d;
+}
+
+/* logos header */
+.container-fluid.header, .logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7.3vh;
+}
+
 #logo_inti {
   max-height: 7.5vh;
   width: auto;
@@ -29,17 +28,8 @@ header {
   filter: invert(100%);
   object-fit: contain;
 }
-  
-  #logo_ig,
-  #logo_git,
-  #logo_gm,
-  #logo_wh {
-    margin: 1vh;
-    height: 3.6vh;
-  }
-  
-  #logo_in {
-    height: 5vh;
-    margin-left: 3vh;
-  }
-  
+
+#logo_in {
+  height: 5vh;
+  margin-left: 3vh;
+}
