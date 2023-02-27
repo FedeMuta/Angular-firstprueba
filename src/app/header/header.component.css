@@ -10,15 +10,7 @@ header {
     justify-content: space-between;
     height: 7.3vh;
   }
-  
-  .icon-group {
-    display: flex;
-    align-items: center;
-    filter: invert(100%);
-    object-fit: contain;
-  }
-  
-  
+      
 #logo_inti {
   max-height: 7.5vh;
   width: auto;
@@ -28,6 +20,13 @@ header {
 #logo_ap {
   max-height: 9vh;
   width: auto;
+  object-fit: contain;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  filter: invert(100%);
   object-fit: contain;
 }
   
