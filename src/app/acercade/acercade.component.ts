@@ -8,6 +8,7 @@ import { MapComponent } from './map/map.component';
 })
 export class AcercadeComponent {
   map = MapComponent;
+  /* estos datos los modificaria el usuario */
   @Input() nombre="";
   @Input() descripcion="";
   @Input() foto="";
