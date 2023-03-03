@@ -1,0 +1,16 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+#banner {
+    background-color: #B8DBD9;
+    height: 92.7vh;
+  }
+
+  .container-fluid {
+    display: flex;
+    /*scroll-snap-align: end;*/
+    overflow: hidden;
+    background-color: #B8DBD9;
+  }

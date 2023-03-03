@@ -1,51 +1,53 @@
 <header>
-    <div class="container-fluid header">
-      <div class="logo-group">
-        <a
-          href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"
-          target="_blank"
-        >
-          <img
-            id="logo_ap"
-            class="img-fluid"
-            src="assets/APLogo-20-20.png"
-            alt="Argentina programa"
-            title="Argentina programa"
-        /></a>
+  <div class="container-fluid header">
+    <div class="logo-group">
+      <a
+        href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"
+        target="_blank"
+      >
         <img
-          id="logo_inti"
+          id="logo_ap"
           class="img-fluid"
-          src="assets/LogosInti.png"
-          alt="logo inti"
-          usemap="#image-map"
+          src="assets/APLogo-20-20.png"
+          alt="Argentina programa"
+          title="Argentina programa"
+      /></a>
+      <img
+        id="logo_inti"
+        class="img-fluid"
+        src="assets/LogosInti.png"
+        alt="logo inti"
+        usemap="#image-map"
+      />
+      <map name="image-map">
+        <area
+          target="_blank"
+          alt="inti"
+          title="Inti"
+          href="https://www.inti.gob.ar/"
+          coords="50,60,0,0"
+          shape="rect"
         />
-        <map name="image-map">
-          <area
-            target="_blank"
-            alt="inti"
-            title="Inti"
-            href="https://www.inti.gob.ar/"
-            coords="50,60,0,0"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="ministerio de produccion"
-            title="Ministerio de produccion"
-            href="https://www.argentina.gob.ar/produccion"
-            coords="200,50,0,0"
-            shape="rect"
-          />
-        </map>
-      </div>
-      <div class="icon-group">
-        <ng-content></ng-content>
-        <img
+        <area
+          target="_blank"
+          alt="ministerio de produccion"
+          title="Ministerio de produccion"
+          href="https://www.argentina.gob.ar/produccion"
+          coords="200,50,0,0"
+          shape="rect"
+        />
+      </map>
+    </div>
+    <div class="icon-group">
+      <!-- ng-content, me parece la opcion mas flexible a futuro, cuando sea todo editable. -->
+      <ng-content></ng-content>      
+      <a routerLink="/login"
+        ><img
           id="logo_in"
           class="img-fluid"
           src="assets/bxs-log-in.svg"
           alt="logo login"
-        />
-      </div>
+      /></a>
     </div>
+  </div>
 </header>

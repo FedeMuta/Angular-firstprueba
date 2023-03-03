@@ -1,11 +1,6 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!--Este es mi archivo principal, aca voy a cargar la estructura de los diferentes componentes -->
+<!--estoy poniendo cada componenete principal uno debajo del otro como era en la maqueta de html y css -->
+<!--tambien tengo componentes que se insertan dentro de otros, como iconos, tajetas, barras de porcentajes, etc-->
 <app-header>
   <app-icono
     link="https://www.instagram.com/fede.muta"
@@ -28,12 +23,10 @@
     alt="whatsapp"
   ></app-icono>
 </app-header>
+<app-banner></app-banner>
+<app-acercade nombre="Federico Leal" descripcion="Tu descripción" foto="assets/foto-perfil.jpg">
+  <app-map></app-map>
+</app-acercade>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<!--la etiqueta final es para saber que aca se utilizan las diferentes rutas internas-->
 <router-outlet></router-outlet>
