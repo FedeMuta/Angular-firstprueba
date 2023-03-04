@@ -1,12 +1,15 @@
-<div class="col">
+<!-- use la clase "acordeon" y la clase "card" de bootstrap 5.3. dentro de la tarjeta puse una imagen y la hice boton
+para que abra y cierre el acordeon igual que lo hace el boton que contiene el nombre de la empresa.
+en el cuerpo de la tarjeta puse el carodeon. -->
+<div class="col"> <!-- pongo todo en una columna para que sea responsive, viene del row padre. -->
   <div class="card">
     <img
       role="button"
-      src="assets/logo sr.jpg"
+      [src]="imgempresa"
       class="img-fluid"
       alt="..."
-      data-bs-toggle="collapse"
-      attr.data-bs-target="#panelsStayOpen-collapse{{ id }}"
+      data-bs-toggle="collapse" 
+      attr.data-bs-target="#panelsStayOpen-collapse{{ id }}" 
       attr.aria-controls="panelsStayOpen-collapse{{ id }}"
       aria-expanded="true"
     />
@@ -15,7 +18,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-heading{{ id }}">
             <button
-              class="accordion-button"
+              class="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
               attr.data-bs-target="#panelsStayOpen-collapse{{ id }}"

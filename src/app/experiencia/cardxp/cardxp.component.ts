@@ -11,6 +11,7 @@ export class CardxpComponent {
   @Input() empresa = "";
   @Input() puesto = "";
   @Input() detalles = "";
+  @Input() imgempresa = "";
 
 }
 

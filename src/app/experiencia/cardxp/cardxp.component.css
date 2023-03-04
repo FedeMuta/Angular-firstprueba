@@ -8,13 +8,13 @@
 
 .img-fluid {
   align-self: center;
-  width: 30vh;
+  width: 25vh;
   height: auto;
   transition: width 1s;
 }
 
 .img-fluid:hover {
-  width: 35vh;
+  width: 30vh;
   height: auto;
 }
 
