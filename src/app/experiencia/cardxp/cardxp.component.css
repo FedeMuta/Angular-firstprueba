@@ -1,0 +1,31 @@
+.card {
+  background-color: #F4F4F9;
+  width: auto;
+  box-shadow: 0 2vh 2vh rgba(0, 141, 118, 0.5);
+  margin: 5px;
+  margin-bottom: 30px;
+}
+
+.img-fluid {
+  align-self: center;
+  width: 30vh;
+  height: auto;
+  transition: width 1s;
+}
+
+.img-fluid:hover {
+  width: 35vh;
+  height: auto;
+}
+
+.accordion-button {
+  display: flex;
+  background-color: #f4f4f9;
+  overflow: auto;
+}
+
+.accordion-collapse {
+  overflow-y: scroll;
+  background-color: #F4F4F9;
+  max-height: 25vh;
+}

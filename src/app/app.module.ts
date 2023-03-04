@@ -9,6 +9,8 @@ import { IconoComponent } from './icono/icono.component';
 import { BannerComponent } from './banner/banner.component';
 import { AcercadeComponent } from './acercade/acercade.component';
 import { MapComponent } from './acercade/map/map.component';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { CardxpComponent } from './experiencia/cardxp/cardxp.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MapComponent } from './acercade/map/map.component';
     IconoComponent,
     BannerComponent,
     AcercadeComponent,
-    MapComponent
+    MapComponent,
+    ExperienciaComponent,
+    CardxpComponent
   ],
   imports: [
     BrowserModule,
