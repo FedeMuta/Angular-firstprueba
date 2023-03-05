@@ -1,20 +1,18 @@
 .card {
   background-color: #F4F4F9;
-  width: auto;
-  box-shadow: 0 2vh 2vh rgba(0, 141, 118, 0.5);
-  margin: 5px;
-  margin-bottom: 30px;
+  box-shadow: 0 2vh 2vh #023d29;
+  margin-bottom: 2vh;
 }
 
 .img-fluid {
   align-self: center;
-  width: 25vh;
+  width: 20vh;
   height: auto;
   transition: width 1s;
 }
 
 .img-fluid:hover {
-  width: 30vh;
+  width: 25vh;
   height: auto;
 }
 

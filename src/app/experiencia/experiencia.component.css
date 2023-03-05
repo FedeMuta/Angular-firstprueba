@@ -1,6 +1,11 @@
 #experiencia {
+  display: flex;
   min-height: 100vh;
   background-color: #04724d;
-  padding: 15vh 10vh;
   /*scroll-snap-align: start;*/
+}
+
+.row{
+  display: flex;
+  align-self: center;
 }

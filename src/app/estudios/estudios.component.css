@@ -1,7 +1,6 @@
 #estudios {
   min-height: 100vh;
   background-color: #f4f4f9;
-  padding: 50px 0;
 }
 
 #estudios h2 {
@@ -10,9 +9,5 @@
 }
 
 #estudios .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-self: center;
-  margin-top: 50px;
+  width: auto;
 }
