@@ -1,24 +1,28 @@
 .progress {
-    height: 25px;
-  }
-  
-  .progress-bar {
-    font-size: 14px;
-    line-height: 25px;
-  }
-  
-  .verde {
-    background-color: #04724d;
-  }
-  
-  .celeste {
-    background-color: #17a2b8;
-  }
-  
-  .naranja {
-    background-color: #ffc107;
-  }
-  
-  .rojo {
-    background-color: #dc3545;
-  }
+  border-color: rgb(12, 12, 12);
+  border-style:double;
+  margin-top: 5%;
+  height: 25px;
+  box-shadow: 0 0.3vh 0.5vh #505050;
+}
+
+.progress-bar {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.verde {
+  background-color: #04724d;
+}
+
+.celeste {
+  background-color: #17a2b8;
+}
+
+.naranja {
+  background-color: #ffc107;
+}
+
+.rojo {
+  background-color: #dc3545;
+}

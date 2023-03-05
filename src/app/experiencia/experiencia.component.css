@@ -1,6 +1,7 @@
 #experiencia {
+  min-height: 85vh;
+  padding-bottom: 10%;
   display: flex;
-  min-height: 100vh;
   background-color: #04724d;
   /*scroll-snap-align: start;*/
 }

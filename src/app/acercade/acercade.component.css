@@ -4,7 +4,7 @@
     height: 100vh;
     /*scroll-snap-align: start;*/
     overflow: hidden;
-    background-color: #B8DBD9;
+    background-color: #B8DBD9;    
   }
   
   .container-fluid.acercade {
@@ -27,13 +27,12 @@
     flex-basis: 50%;
     background-color: #586f7c;
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
   }
   
   .profile-image {
-    width: 50%;
-    height: 50%;
+    width: 45vh;
+    height: 45vh;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
