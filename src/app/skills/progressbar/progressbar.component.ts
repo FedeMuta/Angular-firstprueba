@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progressbar',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./progressbar.component.css']
 })
 export class ProgressbarComponent {
+
+  @Input() tipo="";
+  @Input() color="";
+  @Input() percent="";
+  @Input() habilidad="";
 
 }

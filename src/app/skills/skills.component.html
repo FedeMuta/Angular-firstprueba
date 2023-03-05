@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<section id="skills" class="bg-light">
+  <div class="container-fluid skills py-5">
+    <h2 class="text-center mb-5">Skills</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="text-secondary mb-3">Habilidades Blandas</h4>
+        <ng-content select="[blanda]"></ng-content>
+      </div>
+      <div class="col-md-6">
+        <h4 class="text-secondary mb-3">Habilidades Duras</h4>
+        <ng-content select="[dura]"></ng-content>
+      </div>
+    </div>
+  </div>
+</section>

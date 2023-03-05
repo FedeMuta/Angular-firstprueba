@@ -1,1 +1,14 @@
-<p>progressbar works!</p>
+<div [class]="tipo">
+  <div class="progress mb-3">
+    <div
+      class="progress-bar {{ color }}"
+      role="progressbar"
+      [attr.style]="'width:' + percent + '%'"
+      [attr.aria-valuenow]="percent"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      {{ habilidad }}
+    </div>
+  </div>
+</div>

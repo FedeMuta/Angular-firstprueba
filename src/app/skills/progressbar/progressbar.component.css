@@ -1,0 +1,24 @@
+.progress {
+    height: 25px;
+  }
+  
+  .progress-bar {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  
+  .verde {
+    background-color: #04724d;
+  }
+  
+  .celeste {
+    background-color: #17a2b8;
+  }
+  
+  .naranja {
+    background-color: #ffc107;
+  }
+  
+  .rojo {
+    background-color: #dc3545;
+  }
