@@ -44,6 +44,7 @@
       <!-- este va a ser el acceso al login -->   
       <a routerLink="/login"
         ><img
+          (click)="toggleLogin()"
           id="logo_in"
           class="img-fluid"
           src="assets/bxs-log-in.svg"
@@ -52,3 +53,6 @@
     </div>
   </div>
 </header>
+<div *ngIf="mostrarLogin" data-aos="flip-up">
+  <app-login></app-login>
+</div>

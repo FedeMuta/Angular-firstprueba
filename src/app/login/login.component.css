@@ -1,0 +1,10 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh; 
+  }
+  
+  form {
+    text-align: center; /* para centrar horizontalmente el contenido */
+  }
