@@ -18,6 +18,7 @@ import { ProgressbarComponent } from './skills/progressbar/progressbar.component
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ProyectcardComponent } from './proyectos/proyectcard/proyectcard.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     ProgressbarComponent,
     ProyectosComponent,
     ProyectcardComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
