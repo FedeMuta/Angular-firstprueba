@@ -1,30 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  api = 'https://localhost:4200/api';
-  token;
+  constructor() {}
 
-  constructor(private http: HttpClient, private router: Router) {}
-
-  login(email: string, password: string) {
-    this.http
-      .post(this.api + '/authenticate', { email: email, password: password })
-      .subscribe((resp: any) => {
-        this.router.navigate(['profile']);
-        localStorage.setItem('token', resp.token);
-      });
+  login(email: string, password: string): boolean {
+    // Simula el inicio de sesión exitoso si las credenciales son correctas
+    if (email === 'usuario' && password === 'password') {
+      localStorage.setItem('isLoggedIn', 'true');
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  logout() {
-    localStorage.removeItem('token');
+  logout(): void {
+    localStorage.removeItem('isLoggedIn');
   }
 
-  public get logIn() {
-    return localStorage.getItem('token') !== null;
+  isLoggedIn(): boolean {
+    return localStorage.getItem('isLoggedIn') === 'true';
   }
 }

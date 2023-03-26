@@ -35,3 +35,10 @@ header {
   height: 5vh;
   margin-left: 3vh;
 }
+
+#logo_out {
+  height: 5vh;
+  margin-left: 3vh;
+  filter: invert(100%);
+  border-radius: 50%;
+}

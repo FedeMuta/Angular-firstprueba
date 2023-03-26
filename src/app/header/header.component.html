@@ -42,17 +42,25 @@
       <!-- ng-content, para incertar objetos me parece la opcion mas flexible a futuro, cuando sea todo editable. -->
       <ng-content></ng-content>   
       <!-- este va a ser el acceso al login -->   
-      <a routerLink="/login"
+      <a *ngIf="!authService.isLoggedIn()" routerLink="/login"
         ><img
           (click)="toggleLogin()"
           id="logo_in"
           class="img-fluid"
           src="assets/bxs-log-in.svg"
-          alt="logo login"
+          alt="login"
+      /></a>
+      <a *ngIf="authService.isLoggedIn()" routerLink="/login"
+        ><img
+          (click)="onLogout()"
+          id="logo_out"
+          class="img-fluid"
+          src="assets/foto-perfil.jpg"
+          alt="logout"
       /></a>
     </div>
   </div>
 </header>
-<div *ngIf="mostrarLogin" data-aos="flip-up">
+<div *ngIf="mostrarLogin && !authService.isLoggedIn()" data-aos="flip-up">
   <app-login></app-login>
 </div>
