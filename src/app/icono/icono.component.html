@@ -1,0 +1,12 @@
+<!-- <a [href]="link" target="_blank"><img [src]="imagen" [alt]="alt" class="new" [title]="alt" /></a> -->
+
+<div *ngFor="let icono of iconos" class="icon-box">
+  <a [href]="icono.link" target="_blank"
+    ><img
+      [src]="icono.img"
+      [alt]="icono.name"
+      class="new"
+      [title]="icono.name"
+    />
+  </a>
+</div>

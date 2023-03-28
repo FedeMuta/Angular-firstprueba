@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
+import { IconManagerService } from 'src/app/icono/icon-manager.service';
 
 @Component({
   selector: 'app-icono',
-  template:
-    '<a [href]="link" target="_blank"><img [src]="imagen" [alt]="alt" class="new" [title]="alt" /></a>',
-  styles: ['.new{margin: 1vh;height: 3.6vh;}'], 
+  templateUrl: "./Icono.component.html",
+  styleUrls: ['./Icono.component.css'] 
 })
-//no se si es correcta mi practica, pero al ser tan poco html y css, opte por unificar todo en un archivo solo.
+
 export class IconoComponent {
+  iconos = this.iconManager.getIconos(); /* obtengo los iconos del servicio de datos */
   /* datos a modificar al armar cada icono */
-  @Input() link = '';
-  @Input() imagen = '';
-  @Input() alt = '';
+    
+  constructor(private iconManager: IconManagerService) {}
 }
