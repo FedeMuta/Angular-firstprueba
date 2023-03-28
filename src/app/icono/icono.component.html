@@ -1,6 +1,6 @@
 <!-- <a [href]="link" target="_blank"><img [src]="imagen" [alt]="alt" class="new" [title]="alt" /></a> -->
 
-<div *ngFor="let icono of iconos" class="icon-box">
+<ng-container *ngFor="let icono of iconos">
   <a [href]="icono.link" target="_blank"
     ><img
       [src]="icono.img"
@@ -9,4 +9,4 @@
       [title]="icono.name"
     />
   </a>
-</div>
+</ng-container>

@@ -9,7 +9,6 @@ import { IconManagerService } from 'src/app/icono/icon-manager.service';
 
 export class IconoComponent {
   iconos = this.iconManager.getIconos(); /* obtengo los iconos del servicio de datos */
-  /* datos a modificar al armar cada icono */
     
   constructor(private iconManager: IconManagerService) {}
 }

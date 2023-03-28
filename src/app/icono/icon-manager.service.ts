@@ -20,8 +20,4 @@ export class IconManagerService {
     this.dataService.deleteIcono(index);
   }
 
-  onInit() {
-    this.getIconos();
-  }
-
 }
