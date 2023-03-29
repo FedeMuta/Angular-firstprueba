@@ -1,12 +1,12 @@
-<!-- <a [href]="link" target="_blank"><img [src]="imagen" [alt]="alt" class="new" [title]="alt" /></a> -->
-
-<ng-container *ngFor="let icono of iconos">
-  <a [href]="icono.link" target="_blank"
-    ><img
-      [src]="icono.img"
-      [alt]="icono.name"
-      class="new"
-      [title]="icono.name"
-    />
-  </a>
-</ng-container>
+<ng-conteiner cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+  <ng-container *ngFor="let icono of iconos">
+    <a [href]="icono.link" target="_blank" cdkDrag
+      ><img
+        [src]="icono.img"
+        [alt]="icono.name"
+        class="new"
+        [title]="icono.name"
+      />
+    </a>
+  </ng-container>
+</ng-conteiner>

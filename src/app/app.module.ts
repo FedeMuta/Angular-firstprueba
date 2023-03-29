@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { GoogleMapsModule } from '@angular/google-maps'; /* Google-maps api */
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; /* formularios */
+import { DragDropModule } from '@angular/cdk/drag-drop'; /* drag and drop */
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ProyectcardComponent } from './proyectos/proyectcard/proyectcard.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { LoginComponent } from './login/login.component';
     ProyectosComponent,
     ProyectcardComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { LoginComponent } from './login/login.component';
     GoogleMapsModule, /* goole-maps api */
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

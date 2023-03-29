@@ -4,7 +4,6 @@ import { FormControl } from '@angular/forms';
 /* librerias de formularios */
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from '../auth.service'; /* mi servicio de prueba por ahora */
-import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-login',
