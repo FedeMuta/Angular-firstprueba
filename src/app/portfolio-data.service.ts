@@ -17,46 +17,57 @@ export class PortfolioDataService {
         img: 'assets/bxl-instagram.svg',
         name: 'Instagram',
         link: 'https://www.instagram.com/fede.muta',
-    },
-    {
-      userId: 1,
-      img: 'assets/bxl-github.svg',
-      name: 'github',
-      link: 'https://github.com/FedeMuta',
-    },
-    {
-      userId: 1,
-      img: 'assets/bxl-gmail.svg',
-      name: 'gmail',
-      link: 'mailto: fedemuta@gmail.com',
-    },
-    {
-      userId: 1,
-      img: './assets/bxl-whatsapp.svg',
-      name: 'whatsapp',
-      link: 'https://web.whatsapp.com/send?phone=54911******87',
-    },
-    {
-      userId: 2,
-      img: 'assets/bxl-instagram.svg',
-      name: 'Instagram',
-      link: 'https://www.instagram.com/agustina.muta',
-    }],
-    acercaDe: [{
-      userId: 1,
-      img: 'assets/foto-perfil.jpg',
-      nombre: 'Federico',
-      apellido: 'Muta',
-      descripcion: 'Lorem ippsum  Lorem',
-      ubicacion: 'Argentina',
-    },{
-      userId: 2,
-      img: 'assets/foto-perfil.jpg',
-      nombre: 'Agustina',
-      apellido: 'Muta',
-      descripcion: 'Lorem ippsum  Lorem',
-      ubicacion: 'Argentina',
-    }]};
+      },
+      {
+        userId: 1,
+        img: 'assets/bxl-github.svg',
+        name: 'github',
+        link: 'https://github.com/FedeMuta',
+      },
+      {
+        userId: 1,
+        img: 'assets/bxl-gmail.svg',
+        name: 'gmail',
+        link: 'mailto: fedemuta@gmail.com',
+      },
+      {
+        userId: 1,
+        img: './assets/bxl-whatsapp.svg',
+        name: 'whatsapp',
+        link: 'https://web.whatsapp.com/send?phone=54911******87',
+      },
+      {
+        userId: 2,
+        img: 'assets/bxl-instagram.svg',
+        name: 'Instagram',
+        link: 'https://www.instagram.com/agustina.muta',
+      },
+      {
+        userId: 2,
+        img: 'assets/bxl-gmail.svg',
+        name: 'gmail',
+        link: 'mailto: agusmuta@gmail.com',
+      },
+    ],
+    acercaDe: [
+      {
+        userId: 1,
+        img: 'assets/foto-perfil.jpg',
+        nombre: 'Federico',
+        apellido: 'Muta',
+        descripcion: 'Lorem ippsum  Lorem',
+        ubicacion: 'Liniers, Buenos Aires, Argentina',
+      },
+      {
+        userId: 2,
+        img: 'assets/foto-perfil.jpg',
+        nombre: 'Agustina',
+        apellido: 'Muta',
+        descripcion: 'Lorem ippsum  Lorem',
+        ubicacion: 'Monte Grande, Buenos Aires, Argentina',
+      },
+    ],
+  };
 
   private userId = this.authService.getUserId(); /* obtengo el id de usuario */
 
@@ -80,23 +91,28 @@ export class PortfolioDataService {
 
   deleteIcono(index: number) {
     /* metodo para eliminar un dato del array */
-    this.datos.iconos.splice(index, 1);    
+    this.datos.iconos.splice(index, 1);
   }
 
-  updateIcono(index: number, icono: {
-    index: number;
-    userId: number;
-    img: string;
-    name: string;
-    link: string;
-  }) {
+  updateIcono(
+    index: number,
+    icono: {
+      index: number;
+      userId: number;
+      img: string;
+      name: string;
+      link: string;
+    }
+  ) {
     /* metodo para actualizar un dato del array */
     this.datos.iconos[index] = icono;
   }
 
   getAcercaDeByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
-    return this.datos.acercaDe.filter((acercaDe) => acercaDe.userId === this.userId);
+    return this.datos.acercaDe.filter(
+      (acercaDe) => acercaDe.userId === this.userId
+    );
   }
 
   addAcercaDe(acercaDe: {
@@ -116,19 +132,42 @@ export class PortfolioDataService {
 
   deleteAcercaDe(index: number) {
     /* metodo para eliminar un dato del array */
-    this.datos.acercaDe.splice(index, 1);    
+    this.datos.acercaDe.splice(index, 1);
   }
 
-  updateAcercaDe(index: number, acercaDe: {
-    index: number;
-    userId: number;
-    img: string;
-    nombre: string;
-    apellido: string;
-    descripcion: string;
-    ubicacion: string;
-  }) {
+  updateAcercaDe(
+    index: number,
+    acercaDe: {
+      index: number;
+      userId: number;
+      img: string;
+      nombre: string;
+      apellido: string;
+      descripcion: string;
+      ubicacion: string;
+    }
+  ) {
     /* metodo para actualizar un dato del array */
     this.datos.acercaDe[index] = acercaDe;
+  }
+
+  getUbicationFromUserId() {
+    const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
+    return user ? user.ubicacion : '';
+  }
+
+  addUbicationFromUserId(ubicacion: string) {
+    /* metodo para agregar ubicacion a acerca de */
+    this.datos.acercaDe[this.userId].ubicacion = ubicacion;
+  }
+
+  updateUbicationFromUserId(ubicacion: string) {
+    /* metodo para actualizar ubicacion a acerca de */
+    this.datos.acercaDe[this.userId].ubicacion = ubicacion;
+  }
+
+  deleteUbicationFromUserId() {
+    /* metodo para eliminar ubicacion a acerca de */
+    this.datos.acercaDe[this.userId].ubicacion = '';
   }
 }

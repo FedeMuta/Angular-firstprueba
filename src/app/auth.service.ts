@@ -6,13 +6,14 @@ import { Injectable } from '@angular/core';
 export class AuthService { /* servicio para simular el inicio de sesión */
   constructor() {}
 
-  private userId = 1; /* id de usuario para simular el inicio de sesión */
+  private userId = 2; /* id de usuario para simular el inicio de sesión */
 
   login(email: string, password: string): boolean {  /* método para simular el inicio de sesión */
-    if (email === 'usuario' && password === 'password') { /* si el email y password son correctos, se guarda en el localStorage */
+    if (email === 'Agustina' && password === 'passworD') { /* si el email y password son correctos, se guarda en el localStorage */
       localStorage.setItem('isLoggedIn', 'true'); 
       return true; 
     } else { 
+      alert('Email o contraseña incorrectos'); /* si no, se muestra un alert */
       return false; 
     }
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { PortfolioDataService } from 'src/app/portfolio-data.service';
 
 @Component({
   selector: 'app-map',
@@ -7,18 +8,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
-  ubicacion = "Buenos Aires, Argentina";
+  ubicacion= this.getUbicationFromUser();
   center: google.maps.LatLngLiteral =
     {} as google.maps.LatLngLiteral; /* almacena las coordenadas */
   zoom = 11;
   marker: google.maps.MarkerOptions = {}; /* agrego un marcador para el mapa */
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private dataService: PortfolioDataService) {}
 
   private getLatLngFromAddress(
     address: string
   ): Promise<google.maps.LatLngLiteral> {
-    const apiKey = "mi key";
+    const apiKey = "Mi clave privada de la api google maps";
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`;
 
     /* uso el geocode de la api google maps para obtener las coordenadas de la direccion */
@@ -37,6 +38,10 @@ export class MapComponent implements OnInit {
       position: this.center,
       title: "Mi ubicación",
     };
+  }
+
+  getUbicationFromUser() {
+    return this.dataService.getUbicationFromUserId();
   }
 
   async ngOnInit() {
