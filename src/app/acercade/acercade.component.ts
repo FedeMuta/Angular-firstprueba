@@ -28,4 +28,7 @@ export class AcercadeComponent {
     this.dataService.deleteAcercaDe(index);
   }
 
+  updateAcercaDe(index: number, acercaDe: {index: number, userId: number, img: string, nombre: string, apellido: string, descripcion: string, ubicacion: string}) { 
+    this.dataService.updateAcercaDe(index, acercaDe);
+  }
 }

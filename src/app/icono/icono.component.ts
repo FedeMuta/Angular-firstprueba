@@ -25,6 +25,10 @@ export class IconoComponent {
     this.dataService.deleteIcono(index);
   }
 
+  updateIcono(index: number, icono: {index: number, userId: number, img: string, name: string, link: string}) {
+    this.dataService.updateIcono(index, icono);
+  }
+
   drop(event: CdkDragDrop<any[]>) {
     moveItemInArray(this.iconos, event.previousIndex, event.currentIndex);
   }

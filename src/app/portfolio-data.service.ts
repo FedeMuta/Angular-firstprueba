@@ -83,6 +83,17 @@ export class PortfolioDataService {
     this.datos.iconos.splice(index, 1);    
   }
 
+  updateIcono(index: number, icono: {
+    index: number;
+    userId: number;
+    img: string;
+    name: string;
+    link: string;
+  }) {
+    /* metodo para actualizar un dato del array */
+    this.datos.iconos[index] = icono;
+  }
+
   getAcercaDeByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
     return this.datos.acercaDe.filter((acercaDe) => acercaDe.userId === this.userId);
@@ -108,4 +119,16 @@ export class PortfolioDataService {
     this.datos.acercaDe.splice(index, 1);    
   }
 
+  updateAcercaDe(index: number, acercaDe: {
+    index: number;
+    userId: number;
+    img: string;
+    nombre: string;
+    apellido: string;
+    descripcion: string;
+    ubicacion: string;
+  }) {
+    /* metodo para actualizar un dato del array */
+    this.datos.acercaDe[index] = acercaDe;
+  }
 }
