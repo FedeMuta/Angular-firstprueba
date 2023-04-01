@@ -1,13 +1,15 @@
 <section id="acercade">
   <div class="container-fluid acercade" id="acercade">
     <div class="left" data-aos="fade-right">
-      <div class="profile-image" data-aos="zoom-in">
-        <img [src]="foto" alt="foto de perfil" />
-      </div>
-      <div class="profile-text">
-        <h2>{{nombre}}</h2>
-        <p>{{descripcion}}</p>
-      </div>
+      <ng-container *ngFor="let dato of datos">
+        <div class="profile-image" data-aos="zoom-in">
+          <img [src]="dato.img" alt="foto de perfil" />
+        </div>
+        <div class="profile-text">
+          <h2>{{ dato.nombre + " " + dato.apellido }}</h2>
+          <p>{{ dato.descripcion }}</p>
+        </div>
+      </ng-container>
     </div>
     <div class="right" data-aos="fade-left">
       <ng-content></ng-content>

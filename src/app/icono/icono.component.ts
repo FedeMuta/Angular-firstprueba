@@ -9,7 +9,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 
 export class IconoComponent {
-  iconos = this.dataService.getIconosByUserId(); /* obtengo los iconos del servicio de datos */
+  iconos = this.getIconos(); /* obtengo los iconos */
     
   constructor(private dataService: PortfolioDataService) {}
 
