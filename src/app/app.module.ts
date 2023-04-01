@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { GoogleMapsModule } from '@angular/google-maps'; /* Google-maps api */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; /* formularios */
@@ -46,6 +47,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     GoogleMapsModule, /* goole-maps api */
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     DragDropModule,

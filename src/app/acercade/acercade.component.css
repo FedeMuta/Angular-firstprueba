@@ -4,11 +4,11 @@
   height: 100vh;
   /*scroll-snap-align: start;*/
   overflow: hidden;
-  background-color: #b8dbd9;
+  background-color: #B8DBD9;
 }
 
 .left {
-  background-color: #f4f4f9;
+  background-color: #7e9d9b;
   display: flex;
   flex-direction: column;
   justify-content: center;
