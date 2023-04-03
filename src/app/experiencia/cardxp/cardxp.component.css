@@ -1,11 +1,8 @@
-.row {
-  margin: 1vh;
-}
-
 .card {
   background-color: #F4F4F9;
   box-shadow: 0 2vh 2vh #023d29;
-  margin-bottom: 2vh;
+  margin: 2vh 2vh 2vh 2vh;
+  min-width: 30vw;
 }
 
 .img-fluid {

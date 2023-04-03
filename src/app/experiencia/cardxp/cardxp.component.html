@@ -1,9 +1,9 @@
 <!-- use la clase "acordeon" y la clase "card" de bootstrap 5.3. dentro de la tarjeta puse una imagen y la hice boton
 para que abra y cierre el acordeon igual que lo hace el boton que contiene el nombre de la empresa.
 en el cuerpo de la tarjeta puse el carodeon. -->
-<div class="row" *ngFor="let exp of experiencia">
+<div class="row row-cols-sm-1 row-cols-md-4 row-cols-xl-4 justify-content-center">
   <!-- pongo todo en una columna para que sea responsive, viene del row padre. -->
-  <div class="card">
+  <div class="card h-100" *ngFor="let exp of experiencia">
     <img
       role="button"
       [src]="exp.img"
