@@ -7,14 +7,15 @@ import { PortfolioDataService } from 'src/app/portfolio-data.service';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
 })
+
 export class MapComponent implements OnInit {
-  ubicacion= this.getUbicationFromUser();
+  ubicacion = this.getUbicationFromUser();
   center: google.maps.LatLngLiteral =
-    {} as google.maps.LatLngLiteral; /* almacena las coordenadas */
+    { lat: -34.603722, lng: -58.381592 } as google.maps.LatLngLiteral; /* almacena las coordenadas */
   zoom = 11;
   marker: google.maps.MarkerOptions = {}; /* agrego un marcador para el mapa */
 
-  constructor(private http: HttpClient, private dataService: PortfolioDataService) {}
+  constructor(private http: HttpClient, private dataService: PortfolioDataService) { }
 
   private getLatLngFromAddress(
     address: string
