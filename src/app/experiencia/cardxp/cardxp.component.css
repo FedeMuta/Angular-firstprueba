@@ -1,3 +1,7 @@
+.row {
+  margin: 1vh;
+}
+
 .card {
   background-color: #F4F4F9;
   box-shadow: 0 2vh 2vh #023d29;

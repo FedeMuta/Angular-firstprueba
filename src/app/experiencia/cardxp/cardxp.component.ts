@@ -1,17 +1,31 @@
 import { Component, Input } from '@angular/core';
+import { PortfolioDataService } from 'src/app/portfolio-data.service';
 
 @Component({
   selector: 'app-cardxp',
   templateUrl: './cardxp.component.html',
   styleUrls: ['./cardxp.component.css']
 })
-export class CardxpComponent {
+export class CardxpComponent{
 
-  @Input() id = ""; /* tengo que generar un ID diferente para cada tarjeta para que no se cierren y abran todas juntas */
-  @Input() empresa = "";
-  @Input() puesto = "";
-  @Input() detalles = "";
-  @Input() imgempresa = "";
+  constructor(private dataService: PortfolioDataService) { }
 
+  experiencia = this.dataService.getExperienciaByUserId();
+
+    addExperiencia(experiencia: {
+    cardID: string; userId: number; img: string; empresa: string; puesto: string; detalles: string;
+  }) {
+    this.dataService.addExperiencia(experiencia);
+  }
+
+  deleteExperiencia(cardID: string) {
+    this.dataService.deleteExperiencia(cardID);
+  }
+
+  updateExperiencia(cardID: string, experiencia: {
+    cardID: string; userId: number; img: string; empresa: string; puesto: string; detalles: string;
+  }) {
+    this.dataService.updateExperiencia(cardID, experiencia);
+  }
 }
 
