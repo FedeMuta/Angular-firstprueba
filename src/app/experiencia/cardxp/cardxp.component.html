@@ -2,7 +2,7 @@
 para que abra y cierre el acordeon igual que lo hace el boton que contiene el nombre de la empresa.
 en el cuerpo de la tarjeta puse el carodeon. -->
 <div class="row row-cols-sm-1 row-cols-md-4 row-cols-xl-4 justify-content-center">
-  <!-- pongo todo en una columna para que sea responsive, viene del row padre. -->
+  <!-- pongo todo en fila, con diferentes breakpoints dependiendo del tamaño de la pantalla. -->
   <div class="card h-100" *ngFor="let exp of experiencia">
     <img
       role="button"

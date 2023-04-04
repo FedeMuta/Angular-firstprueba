@@ -69,36 +69,36 @@ export class PortfolioDataService {
     ],
     experiencia: [
       {
-        cardID: "1",
+        cardID: 1,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
-        puesto: "Gerente E-commerce",
-        detalles: "2016 - Presente. Encargado de la coordinación, planificación y puesta en marcha de diferentes estrategias de venta. Supervisar y analizar los diferentes sectores, sus tareas y la colaboración entre los mismos, darles herramientas para mejorar. Resolución de conflictos y reclamos. Encargado de implementar nuevas tecnologías para el desarrollo de herramientas que nos ayuden día a día. "
+        puesto: "Gerente E-commerce. 2016 - Presente",
+        detalles: "Encargado de la coordinación, planificación y puesta en marcha de diferentes estrategias de venta. Supervisar y analizar los diferentes sectores, sus tareas y la colaboración entre los mismos, darles herramientas para mejorar. Resolución de conflictos y reclamos. Encargado de implementar nuevas tecnologías para el desarrollo de herramientas que nos ayuden día a día. "
       },
       {
-        cardID: "2",
+        cardID: 2,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
-        puesto: "Administrativo - Ventas online",
-        detalles: "2011 - 2016. Desarrollo y actualización de hojas de calculo y bases de datos. Creación del sector de E-commerce. Administración, supervisión, análisis, ventas, atención al cliente y envíos en E-commerce."
+        puesto: "Administrativo - Ventas online. 2011 - 2016",
+        detalles: "Desarrollo y actualización de hojas de calculo y bases de datos. Creación del sector de E-commerce. Administración, supervisión, análisis, ventas, atención al cliente y envíos en E-commerce."
       },
       {
-        cardID: "3",
+        cardID: 3,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
-        puesto: "Administrativo",
-        detalles: "2008 - 2011. Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
+        puesto: "Administrativo. 2008 - 2011",
+        detalles: "Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
       },
       {
-        cardID: "4",
+        cardID: 4,
         userId: 2,
         img: "/assets/logo sr.jpg",
         empresa: "SENASA",
-        puesto: "Puerto",
-        detalles: "2008 - 2011. Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
+        puesto: "Puerto. 2008 - 2011",
+        detalles: "Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
       },
     ],
     estudios: [
@@ -261,28 +261,28 @@ export class PortfolioDataService {
   }
 
   addExperiencia(experiencia: {
-    cardID: string;
+    cardID: number;
     userId: number;
     img: string;
     empresa: string;
     puesto: string;
     detalles: string;
   }) {
-    experiencia.cardID = (this.datos.experiencia.length + 1).toString();
+    experiencia.cardID = (this.datos.experiencia.length + 1);
     experiencia.userId = this.userId;
     this.datos.experiencia.push(experiencia);
   }
 
-  deleteExperiencia(cardID: string) {
+  deleteExperiencia(cardID: number) {
     this.datos.experiencia = this.datos.experiencia.filter(
       (experiencia) => experiencia.cardID !== cardID
     );
   }
 
   updateExperiencia(
-    cardID: string,
+    cardID: number,
     experiencia: {
-      cardID: string;
+      cardID: number;
       userId: number;
       img: string;
       empresa: string;

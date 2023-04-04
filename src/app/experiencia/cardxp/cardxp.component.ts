@@ -10,20 +10,24 @@ export class CardxpComponent{
 
   constructor(private dataService: PortfolioDataService) { }
 
-  experiencia = this.dataService.getExperienciaByUserId();
+  experiencia = this.getExperiencia();
+
+    getExperiencia() {
+      return this.dataService.getExperienciaByUserId();
+    }
 
     addExperiencia(experiencia: {
-    cardID: string; userId: number; img: string; empresa: string; puesto: string; detalles: string;
+    cardID: number; userId: number; img: string; empresa: string; puesto: string; detalles: string;
   }) {
     this.dataService.addExperiencia(experiencia);
   }
 
-  deleteExperiencia(cardID: string) {
+  deleteExperiencia(cardID: number) {
     this.dataService.deleteExperiencia(cardID);
   }
 
-  updateExperiencia(cardID: string, experiencia: {
-    cardID: string; userId: number; img: string; empresa: string; puesto: string; detalles: string;
+  updateExperiencia(cardID: number, experiencia: {
+    cardID: number; userId: number; img: string; empresa: string; puesto: string; detalles: string;
   }) {
     this.dataService.updateExperiencia(cardID, experiencia);
   }

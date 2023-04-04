@@ -1,8 +1,10 @@
-<div class="col justify-content-center">
-  <div class="tarjeta">
-    <img [src]="img" alt="Estudio" />
-    <h3>{{institucion}}</h3>
-    <p>{{detalle}}</p>
-    <p>{{inidate}} - {{endate}}</p>
+<div class="row">
+  <div *ngFor="let std of estudios" class="col-md-6">
+    <div class="tarjeta">
+      <img [src]="std.img" alt="Estudio" />
+      <h3>{{std.institucion}}</h3>
+      <p>{{std.detalle}}</p>
+      <p>{{std.inidate}} - {{std.endate}}</p>
+    </div>
   </div>
 </div>

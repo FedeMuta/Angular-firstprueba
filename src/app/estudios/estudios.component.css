@@ -1,12 +1,8 @@
-#estudios {
+.estudios-container {
   padding-bottom: 5%;
   background-color: #f4f4f9;
 }
 
-#estudios h2 {
+.estudios h2 {
   text-align: center;
-}
-
-#estudios .row {
-  width: auto;
 }
