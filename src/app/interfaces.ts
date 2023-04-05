@@ -44,6 +44,11 @@ export interface Habilidades {
 };
 
 export interface Proyectos {
-
+    userId: number,
+    cardId: number,
+    nombre: string,
+    descripcion: string,
+    link: string,
+    img: string,
 };
 

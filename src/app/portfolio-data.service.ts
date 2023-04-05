@@ -146,7 +146,7 @@ export class PortfolioDataService {
         img: "",
       },
       {
-        userId: 2,        
+        userId: 2,
         cardId: 5,
         institucion: "universidad de la matanza",
         detalle: "licenciatura en filosofia de los perritos",
@@ -229,6 +229,31 @@ export class PortfolioDataService {
         percent: "70",
       },
     ],
+    proyectos: [
+      {
+        userId: 1,
+        cardId: 1,
+        nombre: "Proyecto 1",
+        descripcion: "Descripción del proyecto 1",
+        link: "#",
+        img: "https://via.placeholder.com/350x200",
+      }, {
+        userId: 1,
+        cardId: 2,
+        nombre: "Proyecto 2",
+        descripcion: "Descripción del proyecto 2",
+        link: "#",
+        img: "https://via.placeholder.com/350x200",
+      },
+      {
+        userId: 2,
+        cardId: 3,
+        nombre: "Proyecto 1",
+        descripcion: "Descripción del proyecto 1",
+        link: "#",
+        img: "https://via.placeholder.com/350x200",
+      }
+    ]
   };
 
   private userId = this.authService.getUserId(); /* obtengo el id de usuario */
@@ -320,7 +345,7 @@ export class PortfolioDataService {
     );
   };
 
-  addExperiencia(experiencia: Experiencia ) {
+  addExperiencia(experiencia: Experiencia) {
     experiencia.cardId = (this.datos.experiencia.length + 1);
     experiencia.userId = this.userId;
     this.datos.experiencia.push(experiencia);
@@ -343,7 +368,7 @@ export class PortfolioDataService {
     return this.datos.estudios.filter((estudio) => estudio.userId === this.userId);
   };
 
-  addEstudio(estudio:Estudios) {
+  addEstudio(estudio: Estudios) {
     estudio.cardId = (this.datos.estudios.length + 1);
     estudio.userId = this.userId;
     this.datos.estudios.push(estudio);
@@ -384,6 +409,31 @@ export class PortfolioDataService {
       (habilidad) => habilidad.barId === barId
     );
     this.datos.skills[index] = habilidad;
+  };
+
+  getProyectosByUserId() {
+    return this.datos.proyectos.filter(
+      (proyecto) => proyecto.userId === this.userId
+    );
+  };
+
+  addProyecto(proyecto: Proyectos) {
+    proyecto.cardId = (this.datos.proyectos.length + 1);
+    proyecto.userId = this.userId;
+    this.datos.proyectos.push(proyecto);
+  };
+
+  deleteProyecto(cardId: number) {
+    this.datos.proyectos = this.datos.proyectos.filter(
+      (proyecto) => proyecto.cardId !== cardId
+    );
+  };
+
+  updateProyecto(cardId: number, proyecto: Proyectos) {
+    const index = this.datos.proyectos.findIndex(
+      (proyecto) => proyecto.cardId === cardId
+    );
+    this.datos.proyectos[index] = proyecto;
   };
 }
 
