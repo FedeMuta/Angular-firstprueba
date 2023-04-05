@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Icono } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-icono',
@@ -17,7 +18,7 @@ export class IconoComponent {
     return this.dataService.getIconosByUserId(); /* obtengo los iconos del servicio de datos */
   }
 
-  addIcono(icono: {index: number, userId: number, img: string, name: string, link: string}) { 
+  addIcono(icono: Icono) { 
     this.dataService.addIcono(icono);
   }
 
@@ -25,7 +26,7 @@ export class IconoComponent {
     this.dataService.deleteIcono(index);
   }
 
-  updateIcono(index: number, icono: {index: number, userId: number, img: string, name: string, link: string}) {
+  updateIcono(index: number, icono: Icono) {
     this.dataService.updateIcono(index, icono);
   }
 

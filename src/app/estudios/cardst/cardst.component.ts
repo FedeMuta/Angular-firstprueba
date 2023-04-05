@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
+import { Estudios } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-cardst',
@@ -22,7 +23,7 @@ export class CardstComponent {
     return this.dataService.getEstudiosByUserId();
   }
 
-  addEstudio(estudio: {userId: number, institucion: string, detalle: string, inidate: string, endate: string, img: string}) {
+  addEstudio(estudio: Estudios) {
     this.dataService.addEstudio(estudio);
   }
 
@@ -30,7 +31,7 @@ export class CardstComponent {
     this.dataService.deleteEstudio(cardID);
   }
 
-  updateEstudio(cardID: number, estudio: {userId: number, institucion: string, detalle: string, inidate: string, endate: string, img: string}) {
+  updateEstudio(cardID: number, estudio: Estudios) {
     this.dataService.updateEstudio(cardID, estudio);
   }
 

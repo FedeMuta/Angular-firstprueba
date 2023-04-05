@@ -42,7 +42,8 @@ export class MapComponent implements OnInit {
   }
 
   getUbicationFromUser() {
-    return this.dataService.getUbicationFromUserId();
+    const data = this.dataService.getAcercaDeByUserId();
+    return data[0].ubicacion;
   }
 
   async ngOnInit() {

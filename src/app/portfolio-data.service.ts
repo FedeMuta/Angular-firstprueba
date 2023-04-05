@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
+import { Icono, AcercaDe, Experiencia, Estudios, Habilidades, Proyectos } from './interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -14,36 +15,42 @@ export class PortfolioDataService {
     iconos: [
       {
         userId: 1,
+        iconId: 1,
         img: 'assets/bxl-instagram.svg',
         name: 'Instagram',
         link: 'https://www.instagram.com/fede.muta',
       },
       {
         userId: 1,
+        iconId: 2,
         img: 'assets/bxl-github.svg',
         name: 'github',
         link: 'https://github.com/FedeMuta',
       },
       {
         userId: 1,
+        iconId: 3,
         img: 'assets/bxl-gmail.svg',
         name: 'gmail',
         link: 'mailto: fedemuta@gmail.com',
       },
       {
         userId: 1,
+        iconId: 4,
         img: './assets/bxl-whatsapp.svg',
         name: 'whatsapp',
         link: 'https://web.whatsapp.com/send?phone=54911******87',
       },
       {
         userId: 2,
+        iconId: 5,
         img: 'assets/bxl-instagram.svg',
         name: 'Instagram',
         link: 'https://www.instagram.com/agustina.muta',
       },
       {
         userId: 2,
+        iconId: 6,
         img: 'assets/bxl-gmail.svg',
         name: 'gmail',
         link: 'mailto: agusmuta@gmail.com',
@@ -69,7 +76,7 @@ export class PortfolioDataService {
     ],
     experiencia: [
       {
-        cardID: 1,
+        cardId: 1,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
@@ -77,7 +84,7 @@ export class PortfolioDataService {
         detalles: "Encargado de la coordinación, planificación y puesta en marcha de diferentes estrategias de venta. Supervisar y analizar los diferentes sectores, sus tareas y la colaboración entre los mismos, darles herramientas para mejorar. Resolución de conflictos y reclamos. Encargado de implementar nuevas tecnologías para el desarrollo de herramientas que nos ayuden día a día. "
       },
       {
-        cardID: 2,
+        cardId: 2,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
@@ -85,7 +92,7 @@ export class PortfolioDataService {
         detalles: "Desarrollo y actualización de hojas de calculo y bases de datos. Creación del sector de E-commerce. Administración, supervisión, análisis, ventas, atención al cliente y envíos en E-commerce."
       },
       {
-        cardID: 3,
+        cardId: 3,
         userId: 1,
         img: "/assets/logo sr.jpg",
         empresa: "La Polla S.A.",
@@ -93,7 +100,7 @@ export class PortfolioDataService {
         detalles: "Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
       },
       {
-        cardID: 4,
+        cardId: 4,
         userId: 2,
         img: "/assets/logo sr.jpg",
         empresa: "SENASA",
@@ -104,6 +111,7 @@ export class PortfolioDataService {
     estudios: [
       {
         userId: 1,
+        cardId: 1,
         institucion: "Argentina Programa",
         detalle: "Full Stack Developer Jr",
         inidate: "2022",
@@ -112,6 +120,7 @@ export class PortfolioDataService {
       },
       {
         userId: 1,
+        cardId: 2,
         institucion: "Universidad Mercado Libre",
         detalle: "Varios cursos sobre e-commerce",
         inidate: "2015",
@@ -120,6 +129,7 @@ export class PortfolioDataService {
       },
       {
         userId: 1,
+        cardId: 3,
         institucion: "IAC",
         detalle: "Armado y reparación de PC",
         inidate: "2006",
@@ -128,6 +138,7 @@ export class PortfolioDataService {
       },
       {
         userId: 1,
+        cardId: 4,
         institucion: "Escuela de Bellas Artes Rogelio Yrurtia",
         detalle: "estudios secundarios con orientación en artes plásticas.",
         inidate: "2000",
@@ -135,12 +146,87 @@ export class PortfolioDataService {
         img: "",
       },
       {
-        userId: 2,
+        userId: 2,        
+        cardId: 5,
         institucion: "universidad de la matanza",
         detalle: "licenciatura en filosofia de los perritos",
         inidate: "2032",
         endate: "2077",
         img: "",
+      },
+    ],
+    skills: [
+      {
+        barId: 1,
+        userId: 1,
+        tipo: "blanda",
+        habilidad: "Comunicación",
+        color: "celeste",
+        percent: "75",
+      },
+      {
+        barId: 2,
+        userId: 1,
+        tipo: "blanda",
+        habilidad: "Resolución de conflictos",
+        color: "verde",
+        percent: "80",
+      },
+      {
+        barId: 3,
+        userId: 1,
+        tipo: "blanda",
+        habilidad: "Liderazgo",
+        color: "naranja",
+        percent: "70",
+      },
+      {
+        barId: 4,
+        userId: 1,
+        tipo: "dura",
+        habilidad: "Desarrollo Web",
+        color: "verde",
+        percent: "75",
+      },
+      {
+        barId: 5,
+        userId: 1,
+        tipo: "dura",
+        habilidad: "Análisis de Datos",
+        color: "rojo",
+        percent: "30",
+      },
+      {
+        barId: 6,
+        userId: 1,
+        tipo: "dura",
+        habilidad: "Javascript",
+        color: "celeste",
+        percent: "70",
+      },
+      {
+        barId: 7,
+        userId: 2,
+        tipo: "blanda",
+        habilidad: "leer mucho",
+        color: "rojo",
+        percent: "100",
+      },
+      {
+        barId: 8,
+        userId: 2,
+        tipo: "dura",
+        habilidad: "tortilla de papa",
+        color: "verde",
+        percent: "70",
+      },
+      {
+        barId: 9,
+        userId: 2,
+        tipo: "dura",
+        habilidad: "adhiestramiento canino",
+        color: "celeste",
+        percent: "70",
       },
     ],
   };
@@ -149,88 +235,63 @@ export class PortfolioDataService {
 
   getIconosByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
+    console.log(this.datos.iconos.length);
     return this.datos.iconos.filter((icono) => icono.userId === this.userId);
-  }
+  };
 
-  addIcono(icono: {
-    index: number;
-    userId: number;
-    img: string;
-    name: string;
-    link: string;
-  }) {
-    icono.index = this.datos.iconos.length + 1;
+  addIcono(icono: Icono) {
+    icono.iconId = this.datos.iconos.length + 1;
     icono.userId = this.userId;
     this.datos.iconos.push(icono);
     /* metodo para agregar un dato al array */
-  }
+  };
 
-  deleteIcono(index: number) {
+  deleteIcono(iconId: number) {
     /* metodo para eliminar un dato del array */
-    this.datos.iconos.splice(index, 1);
-  }
-
-  updateIcono(
-    index: number,
-    icono: {
-      index: number;
-      userId: number;
-      img: string;
-      name: string;
-      link: string;
+    const index = this.datos.iconos.findIndex(icono => icono.iconId === iconId);
+    if (index !== -1) {
+      this.datos.iconos.splice(index, 1);
     }
-  ) {
+  };
+
+  updateIcono(iconId: number, icono: Icono) {
     /* metodo para actualizar un dato del array */
-    this.datos.iconos[index] = icono;
-  }
+    const index = this.datos.iconos.findIndex(icono => icono.iconId === iconId);
+    if (index !== -1) {
+      this.datos.iconos[index] = icono;
+    }
+  };
 
   getAcercaDeByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
     return this.datos.acercaDe.filter(
       (acercaDe) => acercaDe.userId === this.userId
     );
-  }
+  };
 
-  addAcercaDe(acercaDe: {
-    index: number;
-    userId: number;
-    img: string;
-    nombre: string;
-    apellido: string;
-    descripcion: string;
-    ubicacion: string;
-  }) {
-    acercaDe.index = this.datos.acercaDe.length + 1;
+  addAcercaDe(acercaDe: AcercaDe) {
     acercaDe.userId = this.userId;
     this.datos.acercaDe.push(acercaDe);
     /* metodo para agregar un dato al array */
-  }
+  };
 
   deleteAcercaDe(index: number) {
     /* metodo para eliminar un dato del array */
     this.datos.acercaDe.splice(index, 1);
-  }
+  };
 
-  updateAcercaDe(
-    index: number,
-    acercaDe: {
-      index: number;
-      userId: number;
-      img: string;
-      nombre: string;
-      apellido: string;
-      descripcion: string;
-      ubicacion: string;
-    }
-  ) {
+  updateAcercaDe(userId: number, acercaDe: AcercaDe) {
     /* metodo para actualizar un dato del array */
-    this.datos.acercaDe[index] = acercaDe;
-  }
+    const index = this.datos.acercaDe.findIndex(acerca => acerca.userId === userId);
+    if (index !== -1 && this.datos.acercaDe[index].userId === userId) {
+      this.datos.acercaDe[index] = acercaDe;
+    }
+  };
 
-  getUbicationFromUserId() { /* metodo para obtener ubicacion */
+  getUbicationByUserId() { /* metodo para obtener ubicacion */
     const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
     return user ? user.ubicacion : '';
-  }
+  }; // borrar y cambiar por getAcercaDeByUserId en componente map
 
   /* metodo para agregar ubicacion a acerca de */
   addUbicationFromUserId(ubicacion: string) {
@@ -238,97 +299,93 @@ export class PortfolioDataService {
     if (user) {
       user.ubicacion = ubicacion;
     }
-  }
+  }; // borrar y cambiar por getAcercaDeByUserId en componente map
 
   updateUbicationFromUserId(ubicacion: string) {
     const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
     if (user) {
       user.ubicacion = ubicacion;
     }
-  }
+  }; // borrar y cambiar por getAcercaDeByUserId en componente map
 
   deleteUbicationFromUserId() {
     const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
     if (user) {
       user.ubicacion = '';
     }
-  }
+  }; // borrar y cambiar por getAcercaDeByUserId en componente map
 
   getExperienciaByUserId() {
     return this.datos.experiencia.filter(
       (experiencia) => experiencia.userId === this.userId
     );
-  }
+  };
 
-  addExperiencia(experiencia: {
-    cardID: number;
-    userId: number;
-    img: string;
-    empresa: string;
-    puesto: string;
-    detalles: string;
-  }) {
-    experiencia.cardID = (this.datos.experiencia.length + 1);
+  addExperiencia(experiencia: Experiencia ) {
+    experiencia.cardId = (this.datos.experiencia.length + 1);
     experiencia.userId = this.userId;
     this.datos.experiencia.push(experiencia);
-  }
+  };
 
-  deleteExperiencia(cardID: number) {
+  deleteExperiencia(cardId: number) {
     this.datos.experiencia = this.datos.experiencia.filter(
-      (experiencia) => experiencia.cardID !== cardID
+      (experiencia) => experiencia.cardId !== cardId
     );
-  }
+  };
 
-  updateExperiencia(
-    cardID: number,
-    experiencia: {
-      cardID: number;
-      userId: number;
-      img: string;
-      empresa: string;
-      puesto: string;
-      detalles: string;
-    }
-  ) {
+  updateExperiencia(cardId: number, experiencia: Experiencia) {
     const index = this.datos.experiencia.findIndex(
-      (experiencia) => experiencia.cardID === cardID
+      (experiencia) => experiencia.cardId === cardId
     );
     this.datos.experiencia[index] = experiencia;
-  }
+  };
 
   getEstudiosByUserId() {
     return this.datos.estudios.filter((estudio) => estudio.userId === this.userId);
-  }
+  };
 
-  addEstudio(estudio: {
-    userId: number;
-    institucion: string;
-    detalle: string;
-    inidate: string;
-    endate: string;
-    img: string;
-  }) {
+  addEstudio(estudio:Estudios) {
+    estudio.cardId = (this.datos.estudios.length + 1);
     estudio.userId = this.userId;
     this.datos.estudios.push(estudio);
-  }
+  };
 
-  deleteEstudio(index: number) {
-    this.datos.estudios.splice(index, 1);
-  }
+  deleteEstudio(cardId: number) {
+    this.datos.estudios = this.datos.estudios.filter(
+      (estudio) => estudio.cardId !== cardId
+    );
+  };
 
-  updateEstudio(
-    index: number,
-    estudio: {
-      userId: number;
-      institucion: string;
-      detalle: string;
-      inidate: string;
-      endate: string;
-      img: string;
-    }
-  ) {
+  updateEstudio(cardId: number, estudio: Estudios) {
+    const index = this.datos.estudios.findIndex(
+      (estudio) => estudio.cardId === cardId
+    );
     this.datos.estudios[index] = estudio;
-  }
+  };
+
+  getHabilidadesByUserId() {
+    return this.datos.skills.filter(
+      (habilidad) => habilidad.userId === this.userId
+    );
+  };
+
+  addHabilidad(habilidad: Habilidades) {
+    habilidad.userId = this.userId;
+    this.datos.skills.push(habilidad);
+  };
+
+  deleteHabilidad(barId: number) {
+    this.datos.skills = this.datos.skills.filter(
+      (habilidad) => habilidad.barId !== barId
+    );
+  };
+
+  updateHabilidad(barId: number, habilidad: Habilidades) {
+    const index = this.datos.skills.findIndex(
+      (habilidad) => habilidad.barId === barId
+    );
+    this.datos.skills[index] = habilidad;
+  };
 }
 
 

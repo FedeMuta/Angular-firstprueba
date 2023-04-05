@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
+import { AcercaDe } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-acercade',
@@ -20,7 +21,7 @@ export class AcercadeComponent {
     return this.dataService.getAcercaDeByUserId(); /* obtengo los datos del servicio de datos */
   }
 
-  addAcercaDe(acercaDe: {index: number, userId: number, img: string, nombre: string, apellido: string, descripcion: string, ubicacion: string}) { 
+  addAcercaDe(acercaDe: AcercaDe) { 
     this.dataService.addAcercaDe(acercaDe);
   }
 
@@ -28,7 +29,7 @@ export class AcercadeComponent {
     this.dataService.deleteAcercaDe(index);
   }
 
-  updateAcercaDe(index: number, acercaDe: {index: number, userId: number, img: string, nombre: string, apellido: string, descripcion: string, ubicacion: string}) { 
+  updateAcercaDe(index: number, acercaDe: AcercaDe) { 
     this.dataService.updateAcercaDe(index, acercaDe);
   }
 }

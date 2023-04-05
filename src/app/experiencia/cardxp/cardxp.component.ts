@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
+import { Experiencia } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-cardxp',
@@ -16,9 +17,7 @@ export class CardxpComponent{
       return this.dataService.getExperienciaByUserId();
     }
 
-    addExperiencia(experiencia: {
-    cardID: number; userId: number; img: string; empresa: string; puesto: string; detalles: string;
-  }) {
+    addExperiencia(experiencia: Experiencia) {
     this.dataService.addExperiencia(experiencia);
   }
 
@@ -26,9 +25,7 @@ export class CardxpComponent{
     this.dataService.deleteExperiencia(cardID);
   }
 
-  updateExperiencia(cardID: number, experiencia: {
-    cardID: number; userId: number; img: string; empresa: string; puesto: string; detalles: string;
-  }) {
+  updateExperiencia(cardID: number, experiencia: Experiencia) {
     this.dataService.updateExperiencia(cardID, experiencia);
   }
 }
