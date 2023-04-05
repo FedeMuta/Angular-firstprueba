@@ -235,7 +235,6 @@ export class PortfolioDataService {
 
   getIconosByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
-    console.log(this.datos.iconos.length);
     return this.datos.iconos.filter((icono) => icono.userId === this.userId);
   };
 

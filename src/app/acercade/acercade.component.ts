@@ -25,11 +25,11 @@ export class AcercadeComponent {
     this.dataService.addAcercaDe(acercaDe);
   }
 
-  deleteAcercaDe(index: number) { 
-    this.dataService.deleteAcercaDe(index);
+  deleteAcercaDe(userId: number) { 
+    this.dataService.deleteAcercaDe(userId);
   }
 
-  updateAcercaDe(index: number, acercaDe: AcercaDe) { 
-    this.dataService.updateAcercaDe(index, acercaDe);
+  updateAcercaDe(userId: number, acercaDe: AcercaDe) { 
+    this.dataService.updateAcercaDe(userId, acercaDe);
   }
 }
