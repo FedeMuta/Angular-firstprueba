@@ -28,3 +28,7 @@
   background-color: #F4F4F9;
   max-height: 25vh;
 }
+
+button {
+  font-size: 70%;
+}

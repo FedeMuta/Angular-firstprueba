@@ -1,12 +1,12 @@
-<ng-container *ngFor = "let proyect of proyectos">
-<div class="col mb-4" data-aos="fade-up">
-  <div class="card">
-    <img [src]="proyect.img" class="card-img-top" [alt]="proyect.nombre" />
-    <div class="card-body">
-      <h5 class="card-title">{{ proyect.nombre }}</h5>
-      <p class="card-text">{{ proyect.descripcion }}</p>
-      <a [href]="proyect.link" class="btn btn-primary">Ver proyecto</a>
+<ng-container *ngFor="let proyect of proyectos">
+  <div class="col mb-4" data-aos="fade-up">
+    <div class="card">
+      <img [src]="proyect.img" class="card-img-top" [alt]="proyect.nombre" />
+      <div class="card-body">
+        <h5 class="card-title">{{ proyect.nombre }}</h5>
+        <p class="card-text">{{ proyect.descripcion }}</p>
+        <a [href]="proyect.link" class="btn btn-primary">Ver proyecto</a>
+      </div>
     </div>
   </div>
-</div>
 </ng-container>

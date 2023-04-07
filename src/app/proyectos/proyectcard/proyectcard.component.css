@@ -2,7 +2,7 @@
 .card {
   border: none;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;  
 }
 
 .card:hover {
@@ -12,18 +12,18 @@
 /* Estilos del botón */
 .btn-primary {
   background-color: #fff;
-  color: #586f7c;
+  color: #6d7a81;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #586f7c;
+  background-color: #72797e;
   color: #ffff;
 }
 
 /* Ajustes de margen */
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
 }
 
 /* Ajuste de tamaño de imagen */
