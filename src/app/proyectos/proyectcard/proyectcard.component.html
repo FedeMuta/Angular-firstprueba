@@ -1,6 +1,7 @@
 <ng-container *ngFor="let proyect of proyectos">
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
   <div class="col mb-4" data-aos="fade-up">
-    <div class="card">
+    <div class="card" cdkDrag>
       <img [src]="proyect.img" class="card-img-top" [alt]="proyect.nombre" />
       <div class="card-body">
         <h5 class="card-title">{{ proyect.nombre }}</h5>
@@ -9,4 +10,5 @@
       </div>
     </div>
   </div>
+</div>
 </ng-container>

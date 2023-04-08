@@ -1,4 +1,4 @@
-<ng-conteiner cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+<div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
   <ng-container *ngFor="let icono of iconos">
     <a [href]="icono.link" target="_blank" cdkDrag
       ><img
@@ -9,4 +9,4 @@
       />
     </a>
   </ng-container>
-</ng-conteiner>
+</div>

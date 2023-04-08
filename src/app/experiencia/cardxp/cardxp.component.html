@@ -1,46 +1,54 @@
 <!-- use la clase "acordeon" y la clase "card" de bootstrap 5.3. dentro de la tarjeta puse una imagen y la hice boton
 para que abra y cierre el acordeon igual que lo hace el boton que contiene el nombre de la empresa.
 en el cuerpo de la tarjeta puse el carodeon. -->
-<div class="row row-cols-sm-1 row-cols-md-4 row-cols-xl-4 justify-content-center">
-  <!-- pongo todo en fila, con diferentes breakpoints dependiendo del tamaño de la pantalla. -->
-  <div class="card h-100" *ngFor="let exp of experiencia">
-    <img
-      role="button"
-      [src]="exp.img"
-      class="img-fluid"
-      alt="..."
-      data-bs-toggle="collapse"
-      attr.data-bs-target="#panelsStayOpen-collapse{{ exp.cardId }}"
-      attr.aria-controls="panelsStayOpen-collapse{{ exp.cardId }}"
-      aria-expanded="true"
-    />
-    <div class="card-body">
-      <div class="accordion">
-        <div class="accordion-item">
-          <h2
-            class="accordion-header"
-            id="panelsStayOpen-heading{{ exp.cardId }}"
-          >
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              attr.data-bs-target="#panelsStayOpen-collapse{{ exp.cardId }}"
-              aria-expanded="true"
-              attr.aria-controls="panelsStayOpen-collapse{{ exp.cardId }}"
+<div
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div
+    class="row row-cols-sm-1 row-cols-md-4 row-cols-xl-4 justify-content-center"
+  >
+    <!-- pongo todo en fila, con diferentes breakpoints dependiendo del tamaño de la pantalla. -->
+    <div class="card h-100" *ngFor="let exp of experiencia" cdkDrag>
+      <img
+        role="button"
+        [src]="exp.img"
+        class="img-fluid"
+        alt="..."
+        data-bs-toggle="collapse"
+        attr.data-bs-target="#panelsStayOpen-collapse{{ exp.cardId }}"
+        attr.aria-controls="panelsStayOpen-collapse{{ exp.cardId }}"
+        aria-expanded="true"
+      />
+      <div class="card-body">
+        <div class="accordion">
+          <div class="accordion-item">
+            <h2
+              class="accordion-header"
+              id="panelsStayOpen-heading{{ exp.cardId }}"
             >
-              {{ exp.empresa }}
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapse{{ exp.cardId }}"
-            class="accordion-collapse collapse show"
-            attr.aria-labelledby="panelsStayOpen-heading{{ exp.cardId }}"
-          >
-            <div class="accordion-body">
-              <strong>{{ exp.puesto }}</strong
-              ><br />
-              {{ exp.detalles }}
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                attr.data-bs-target="#panelsStayOpen-collapse{{ exp.cardId }}"
+                aria-expanded="true"
+                attr.aria-controls="panelsStayOpen-collapse{{ exp.cardId }}"
+              >
+                {{ exp.empresa }}
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapse{{ exp.cardId }}"
+              class="accordion-collapse collapse show"
+              attr.aria-labelledby="panelsStayOpen-heading{{ exp.cardId }}"
+            >
+              <div class="accordion-body">
+                <strong>{{ exp.puesto }}</strong
+                ><br />
+                {{ exp.detalles }}
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
 import { Experiencia } from 'src/app/interfaces';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-cardxp',
@@ -27,6 +28,10 @@ export class CardxpComponent{
 
   updateExperiencia(cardID: number, experiencia: Experiencia) {
     this.dataService.updateExperiencia(cardID, experiencia);
+  }
+
+  drop(event: CdkDragDrop<any[]>) {
+    moveItemInArray(this.experiencia, event.previousIndex, event.currentIndex);
   }
 }
 

@@ -1,18 +1,20 @@
-<ng-container *ngFor = "let skill of habilidades"> <!-- itero sobre las habilidades -->
-  <ng-container *ngIf="skill.tipo === tipo"> <!-- filtro por tipo -->
-<div [class]="skill.tipo">
-  <div class="progress mb-3">
-    <div
-      class="progress-bar {{ skill.color }}"
-      role="progressbar"
-      [attr.style]="'width:' + skill.percent + '%'"
-      [attr.aria-valuenow]="skill.percent"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    >
-      {{ skill.habilidad }}
+<ng-container *ngFor="let skill of habilidades">
+  <!-- itero sobre las habilidades -->
+  <ng-container *ngIf="skill.tipo === tipo">
+    <!-- filtro por tipo -->
+    <div [class]="skill.tipo" cdkDrag>
+      <div class="progress mb-3">
+        <div
+          class="progress-bar {{ skill.color }}"
+          role="progressbar"
+          [attr.style]="'width:' + skill.percent + '%'"
+          [attr.aria-valuenow]="skill.percent"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          {{ skill.habilidad }}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</ng-container>
+  </ng-container>
 </ng-container>
