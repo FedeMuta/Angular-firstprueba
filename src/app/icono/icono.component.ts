@@ -26,8 +26,10 @@ export class IconoComponent {
     this.dataService.addIcono(icono);
   }
 
-  deleteIcono(index: number) { 
+  deleteIcono(index: number, event: Event) { 
+    event.preventDefault();
     this.dataService.deleteIcono(index);
+    this.iconos = this.getIconos();
   }
 
   updateIcono(index: number, icono: Icono) {

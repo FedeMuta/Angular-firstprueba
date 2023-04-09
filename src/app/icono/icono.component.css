@@ -1,4 +1,17 @@
-.new {
+.new { 
   margin: 1vh;
   height: 3.6vh;
+}
+
+.eliminar-icono {
+  position: absolute;
+  top: 0;
+  right: -0.4vh;
+  height: 1.9vh; /* ajusta el tamaño de acuerdo a tus necesidades */
+  cursor: pointer;
+}
+
+a {
+  position: relative;
+  display: inline-block;
 }

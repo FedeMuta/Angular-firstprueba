@@ -1,12 +1,26 @@
-<div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+<div
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)"
+>
   <ng-container *ngFor="let icono of iconos">
-    <a [href]="icono.link" target="_blank" cdkDrag [cdkDragDisabled]="!isLogged()"
+    <a
+      [href]="icono.link"
+      target="_blank"
+      cdkDrag
+      [cdkDragDisabled]="!isLogged()"
       ><img
         [src]="icono.img"
         [alt]="icono.name"
         class="new"
         [title]="icono.name"
-      />
+      /><img
+      *ngIf="isLogged()"
+      src="/assets/bx-message-square-x.svg"
+      alt="Eliminar icono"
+      class="eliminar-icono"
+      (click)="deleteIcono(icono.iconId, $event)"
+    />
     </a>
   </ng-container>
 </div>
