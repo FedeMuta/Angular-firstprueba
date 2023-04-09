@@ -8,17 +8,21 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   templateUrl: './cardxp.component.html',
   styleUrls: ['./cardxp.component.css']
 })
-export class CardxpComponent{
+export class CardxpComponent {
 
   constructor(private dataService: PortfolioDataService) { }
 
   experiencia = this.getExperiencia();
 
-    getExperiencia() {
-      return this.dataService.getExperienciaByUserId();
-    }
+  isLogged() {
+    return this.dataService.isLoggedIn();
+  }
 
-    addExperiencia(experiencia: Experiencia) {
+  getExperiencia() {
+    return this.dataService.getExperienciaByUserId();
+  }
+
+  addExperiencia(experiencia: Experiencia) {
     this.dataService.addExperiencia(experiencia);
   }
 

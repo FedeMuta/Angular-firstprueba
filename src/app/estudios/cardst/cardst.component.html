@@ -5,7 +5,7 @@
   (cdkDropListDropped)="drop($event)"
 >
   <div *ngFor="let std of estudios" class="col-md-6">
-    <div class="tarjeta" cdkDrag>
+    <div class="tarjeta" cdkDrag [cdkDragDisabled]="!isLogged()">
       <h3>{{ std.institucion }}</h3>
       <p>{{ std.detalle }}</p>
       <p>{{ std.inidate }} - {{ std.endate }}</p>

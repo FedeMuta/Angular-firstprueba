@@ -10,13 +10,17 @@ import { Habilidades } from 'src/app/interfaces';
 export class ProgressbarComponent {
 
   @Input() tipo: string = "";
-  @Input() color="";
-  @Input() percent="";
-  @Input() habilidad="";
+  @Input() color = "";
+  @Input() percent = "";
+  @Input() habilidad = "";
 
-  constructor(private dataService: PortfolioDataService) {}
+  constructor(private dataService: PortfolioDataService) { }
 
   habilidades = this.getHabilidades();
+
+  isLogged() {
+    return this.dataService.isLoggedIn();
+  }
 
   getHabilidades() {
     return this.dataService.getHabilidadesByUserId();

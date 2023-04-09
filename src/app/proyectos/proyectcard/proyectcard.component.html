@@ -1,7 +1,7 @@
 <ng-container *ngFor="let proyect of proyectos">
   <div cdkDropList (cdkDropListDropped)="drop($event)">
   <div class="col mb-4" data-aos="fade-up">
-    <div class="card" cdkDrag>
+    <div class="card" cdkDrag [cdkDragDisabled]="!isLogged()">
       <img [src]="proyect.img" class="card-img-top" [alt]="proyect.nombre" />
       <div class="card-body">
         <h5 class="card-title">{{ proyect.nombre }}</h5>

@@ -10,15 +10,19 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 export class CardstComponent {
 
-  @Input() institucion="";
-  @Input() detalle="";
-  @Input() inidate="";
-  @Input() endate="";
-  @Input() img="";
+  @Input() institucion = "";
+  @Input() detalle = "";
+  @Input() inidate = "";
+  @Input() endate = "";
+  @Input() img = "";
 
   constructor(private dataService: PortfolioDataService) { }
 
   estudios = this.getEstudios();
+
+  isLogged() {
+    return this.dataService.isLoggedIn();
+  }
 
   getEstudios() {
     return this.dataService.getEstudiosByUserId();

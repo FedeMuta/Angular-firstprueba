@@ -2,7 +2,7 @@
   <!-- itero sobre las habilidades -->
   <ng-container *ngIf="skill.tipo === tipo">
     <!-- filtro por tipo -->
-    <div [class]="skill.tipo" cdkDrag>
+    <div [class]="skill.tipo" cdkDrag [cdkDragDisabled]="!isLogged()">
       <div class="progress mb-3">
         <div
           class="progress-bar {{ skill.color }}"

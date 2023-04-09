@@ -253,6 +253,10 @@ export class PortfolioDataService {
 
   private userId = this.authService.getUserId(); /* obtengo el id de usuario */
 
+  isLoggedIn() {
+    return this.authService.isLoggedIn();
+  }
+
   getIconosByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
     return this.datos.iconos.filter((icono) => icono.userId === this.userId);

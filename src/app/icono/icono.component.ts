@@ -14,6 +14,10 @@ export class IconoComponent {
     
   constructor(private dataService: PortfolioDataService) {}
 
+  isLogged() {
+    return this.dataService.isLoggedIn();
+  }
+
   getIconos() {
     return this.dataService.getIconosByUserId(); /* obtengo los iconos del servicio de datos */
   }

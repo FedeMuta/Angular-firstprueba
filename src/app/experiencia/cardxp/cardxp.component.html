@@ -10,7 +10,7 @@ en el cuerpo de la tarjeta puse el carodeon. -->
     class="row row-cols-sm-1 row-cols-md-4 row-cols-xl-4 justify-content-center"
   >
     <!-- pongo todo en fila, con diferentes breakpoints dependiendo del tamaño de la pantalla. -->
-    <div class="card h-100" *ngFor="let exp of experiencia" cdkDrag>
+    <div class="card h-100" *ngFor="let exp of experiencia" cdkDrag [cdkDragDisabled]="!isLogged()">
       <img
         role="button"
         [src]="exp.img"

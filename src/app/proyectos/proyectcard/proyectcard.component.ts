@@ -19,6 +19,10 @@ export class ProyectcardComponent {
 
   constructor(public dataService: PortfolioDataService) { }
 
+  isLogged() {
+    return this.dataService.isLoggedIn();
+  };
+
   getProyectos() {
     return this.dataService.getProyectosByUserId();
   };
