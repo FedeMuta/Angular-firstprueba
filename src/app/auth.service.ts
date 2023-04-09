@@ -4,33 +4,52 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService { /* servicio para simular el inicio de sesión */
-  constructor() {}
+  constructor() { }
 
-  private userId = 2; /* id de usuario para simular el inicio de sesión */
+  usuarios = [
+    {
+      userId: 1,
+      email: "Fede",
+      password: "password"
+    },
+    {
+      userId: 2,
+      email: "Agustina",
+      password: "passworD"
+    }
+  ]; /* array de usuarios */
+
+  private userId: number | null = null; /* id de usuario */
 
   login(email: string, password: string): boolean {  /* método para simular el inicio de sesión */
-    if (email === 'Agustina' && password === 'passworD') { /* si el email y password son correctos, se guarda en el localStorage */
-      localStorage.setItem('isLoggedIn', 'true'); 
-      return true; 
-    } else { 
-      alert('Email o contraseña incorrectos'); /* si no, se muestra un alert */
-      return false; 
+    for (let user of this.usuarios) {
+      if (user.email === email && user.password === password) { /* si el email y password son correctos, se guarda en el localStorage */
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userId', user.userId.toString()); /* se guarda el id de usuario */
+        this.userId = user.userId; /* se guarda el id de usuario */
+        return true;
+      }
     }
-  }
+    alert('Email o contraseña incorrectos'); /* si no, se muestra un alert */
+    return false;
+  };
 
   logout(): void {
     localStorage.removeItem('isLoggedIn'); /* elimina el item isLoggedIn del localStorage */
-  }
+  };
 
   isLoggedIn(): boolean {
     return localStorage.getItem('isLoggedIn') === 'true'; /* devuelve true si el item isLoggedIn es igual a true */
-  }
+  };
 
   getUserId(): number {
     if (!this.isLoggedIn()) { /* si no esta logueado, devuelve 1, el usuario por defecto. */
       return 1;
     }
+    if (this.userId === null) { /* si no hay id de usuario guardado, lo busca en el localStorage */
+      const storedUserId = localStorage.getItem('userId');
+      this.userId = storedUserId ? parseInt(storedUserId) : 1; /* si no hay id de usuario guardado, asigna 1 */
+    }
     return this.userId; /* devuelve el id de usuario */
-  }
-
-}
+  };
+};
