@@ -1,20 +1,10 @@
-.row {
-   align-items: center; 
-}
-
 .tarjeta {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  padding: 1vh;
+  padding: 2vh 2vh 2vh 2vh;
   margin-bottom: 2vh;
   text-align: center;
-}
-
-.tarjeta img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .tarjeta h3 {

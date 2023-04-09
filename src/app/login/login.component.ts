@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     const password = this.form.get('password')?.value; /* capturo el password del formulario */
   
     if (this.authService.login(email, password)) {
-      console.log('Inicio de sesión exitoso');
+      window.location.reload(); /* recarga la página */
       // Redirecciona al usuario a la página principal u otra página
     } else {
       console.log('Error de inicio de sesión');

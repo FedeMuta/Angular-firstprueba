@@ -116,7 +116,6 @@ export class PortfolioDataService {
         detalle: "Full Stack Developer Jr",
         inidate: "2022",
         endate: "Actualidad",
-        img: "",
       },
       {
         userId: 1,
@@ -125,7 +124,6 @@ export class PortfolioDataService {
         detalle: "Varios cursos sobre e-commerce",
         inidate: "2015",
         endate: "2017",
-        img: "",
       },
       {
         userId: 1,
@@ -134,7 +132,6 @@ export class PortfolioDataService {
         detalle: "Armado y reparación de PC",
         inidate: "2006",
         endate: "2006",
-        img: "",
       },
       {
         userId: 1,
@@ -143,7 +140,6 @@ export class PortfolioDataService {
         detalle: "estudios secundarios con orientación en artes plásticas.",
         inidate: "2000",
         endate: "2005",
-        img: "",
       },
       {
         userId: 2,
@@ -152,7 +148,6 @@ export class PortfolioDataService {
         detalle: "licenciatura en filosofia de los perritos",
         inidate: "2032",
         endate: "2077",
-        img: "",
       },
     ],
     skills: [

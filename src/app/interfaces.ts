@@ -31,7 +31,6 @@ export interface Estudios {
     detalle: string,
     inidate: string,
     endate: string,
-    img: string,
 };
 
 export interface Habilidades {
