@@ -8,14 +8,14 @@
       [href]="icono.link"
       target="_blank"
       cdkDrag
-      [cdkDragDisabled]="!isLogged()"
+      [cdkDragDisabled]="dAndD()"
       ><img
         [src]="icono.img"
         [alt]="icono.name"
         class="new"
         [title]="icono.name"
       /><img
-      *ngIf="isLogged()"
+      *ngIf="mostrarEdit()"
       src="/assets/bx-message-square-x.svg"
       alt="Eliminar icono"
       class="eliminar-icono"

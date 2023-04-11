@@ -42,3 +42,13 @@ header {
   filter: invert(100%);
   border-radius: 50%;
 }
+
+#logoadd {
+  margin-right: 2vh;
+  cursor: pointer;
+}
+
+#edit {
+  margin-right: 5vh;
+  cursor: pointer;
+}

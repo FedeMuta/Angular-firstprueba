@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Icono, AcercaDe, Experiencia, Estudios, Habilidades, Proyectos } from './interfaces';
 
@@ -232,7 +232,8 @@ export class PortfolioDataService {
         descripcion: "Descripción del proyecto 1",
         link: "#",
         img: "https://via.placeholder.com/350x200",
-      }, {
+      }, 
+      {
         userId: 1,
         cardId: 2,
         nombre: "Proyecto 2",
@@ -251,6 +252,8 @@ export class PortfolioDataService {
     ]
   };
 
+  arrayUpdated = new EventEmitter<any[]>();
+
   private userId = this.authService.getUserId(); /* obtengo el id de usuario */
 
   isLoggedIn() {
@@ -266,6 +269,7 @@ export class PortfolioDataService {
     icono.iconId = this.datos.iconos.length + 1;
     icono.userId = this.userId;
     this.datos.iconos.push(icono);
+    this.arrayUpdated.emit(this.datos.iconos);
     /* metodo para agregar un dato al array */
   };
 

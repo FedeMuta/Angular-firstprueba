@@ -39,10 +39,28 @@
       </map>
     </div>
     <div class="icon-group">
+      <img
+        *ngIf="isLogged()"
+        (click)="toggleEdit()"
+        id="edit"
+        src="assets/bx-message-square-edit.svg"
+        class="img-fluid"
+        alt="Editar Iconos"
+        title="Editar iconos"
+      />
+      <img
+        *ngIf="mostrarEdit"
+        (click)="addIconx()"
+        id="logoadd"
+        src="assets/bx-plus-circle.svg"
+        class="img-fluid"
+        alt="agregar icono"
+        title="agregar icono"
+      />
       <!-- ng-content, para incertar objetos me parece la opcion mas flexible a futuro, cuando sea todo editable. -->
-      <ng-content></ng-content>   
-      <!-- este era el link al login pero preferi que sea SPA, falta cambiar de etiqueta -->   
-      <a *ngIf="!authService.isLoggedIn()" routerLink="/login"
+      <ng-content></ng-content>
+      <!-- este era el link al login pero preferi que sea SPA, falta cambiar de etiqueta -->
+      <a *ngIf="!isLogged()" routerLink="/login"
         ><img
           (click)="toggleLogin()"
           id="logo_in"
@@ -51,7 +69,7 @@
           alt="login"
           title="Login"
       /></a>
-      <a *ngIf="authService.isLoggedIn()" routerLink="/login"
+      <a *ngIf="isLogged()" routerLink="/login"
         ><img
           (click)="onLogout()"
           id="logo_out"
@@ -63,6 +81,9 @@
     </div>
   </div>
 </header>
-<div *ngIf="mostrarLogin && !authService.isLoggedIn()" data-aos="flip-up">
+<div *ngIf="mostrarLogin && !isLogged()" data-aos="flip-up">
   <app-login></app-login>
+</div>
+<div *ngIf="addEdit && mostrarEdit" data-aos="flip-left" class="justify-content-center">
+  <app-icon-manager></app-icon-manager>
 </div>

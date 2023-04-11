@@ -23,6 +23,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ProyectcardComponent } from './proyectos/proyectcard/proyectcard.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { IconManagerComponent } from './header/icon-manager/icon-manager.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LoginComponent } from './login/login.component';
     ProyectcardComponent,
     FooterComponent,
     LoginComponent,
+    IconManagerComponent,
   ],
   imports: [
     BrowserModule,
