@@ -34,6 +34,7 @@ header {
 #logo_in {
   height: 5vh;
   margin-left: 3vh;
+  cursor: pointer;
 }
 
 #logo_out {
@@ -41,14 +42,17 @@ header {
   margin-left: 3vh;
   filter: invert(100%);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #logoadd {
   margin-right: 2vh;
   cursor: pointer;
+  height: 2.5vh;
 }
 
 #edit {
   margin-right: 5vh;
   cursor: pointer;
+  height: 3.3vh;
 }

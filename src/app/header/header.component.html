@@ -57,33 +57,35 @@
         alt="agregar icono"
         title="agregar icono"
       />
-      <!-- ng-content, para incertar objetos me parece la opcion mas flexible a futuro, cuando sea todo editable. -->
-      <ng-content></ng-content>
-      <!-- este era el link al login pero preferi que sea SPA, falta cambiar de etiqueta -->
-      <a *ngIf="!isLogged()" routerLink="/login"
-        ><img
-          (click)="toggleLogin()"
-          id="logo_in"
-          class="img-fluid"
-          src="assets/bxs-log-in.svg"
-          alt="login"
-          title="Login"
-      /></a>
-      <a *ngIf="isLogged()" routerLink="/login"
-        ><img
-          (click)="onLogout()"
-          id="logo_out"
-          class="img-fluid"
-          src="assets/foto-perfil.jpg"
-          alt="logout"
-          title="Logout"
-      /></a>
+      <app-icono></app-icono>
+      <img
+        *ngIf="!isLogged()"
+        (click)="toggleLogin()"
+        id="logo_in"
+        class="img-fluid"
+        src="assets/bxs-log-in.svg"
+        alt="login"
+        title="Login"
+      />
+      <img
+        *ngIf="isLogged()"
+        (click)="onLogout()"
+        id="logo_out"
+        class="img-fluid"
+        src="assets/foto-perfil.jpg"
+        alt="logout"
+        title="Logout"
+      />
     </div>
   </div>
 </header>
 <div *ngIf="mostrarLogin && !isLogged()" data-aos="flip-up">
   <app-login></app-login>
 </div>
-<div *ngIf="addEdit && mostrarEdit" data-aos="flip-left" class="justify-content-center">
+<div
+  *ngIf="addEdit && mostrarEdit"
+  data-aos="flip-up"
+  class="justify-content-center"
+>
   <app-icon-manager></app-icon-manager>
 </div>

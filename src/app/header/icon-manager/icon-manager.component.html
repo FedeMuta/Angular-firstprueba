@@ -1,16 +1,27 @@
 <div class="icons-container">
-    <form (ngSubmit)="addIcono(selectedIcono)">
-      <div *ngFor="let icono of possibleIcons" class="icon-box" (click)="selectIcono(icono)" [ngClass]="{'selected': selectedIcono === icono}">
+  <form (ngSubmit)="addIcono(selectedIcono)">
+    <div
+      *ngFor="let icono of possibleIcons"
+      class="icon-box"
+      (click)="selectIcono(icono)"
+      [ngClass]="{ selected: selectedIcono === icono }"
+    >
+      <div class="col">
         <img [src]="icono.img" />
         <p>{{ icono.name }}</p>
       </div>
-  
-      <div class="form-group">
-        
-        <input type="url" [(ngModel)]="selectedIcono.link" name="link" id="link" placeholder="Enlace de la red social" required>
-      
-  
+    </div>
+    <div class="input-group">
+      <input
+        type="url"
+        [(ngModel)]="selectedIcono.link"
+        name="link"
+        id="link"
+        placeholder="Enlace de la red social"
+        required
+      />
+
       <button type="submit" [disabled]="!selectedIcono">Agregar</button>
     </div>
-    </form>
-  </div>
+  </form>
+</div>
