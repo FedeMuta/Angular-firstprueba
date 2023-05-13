@@ -30,7 +30,7 @@ export class HeaderComponent {
 
   onLogout(): void {
     this.authService.logout();
-    this.mostrarEdit = false;
+    window.location.reload();
   }
 
   addIconx(): void {
