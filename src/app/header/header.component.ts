@@ -30,6 +30,7 @@ export class HeaderComponent {
 
   onLogout(): void {
     this.authService.logout();
+    this.mostrarEdit = false;
   }
 
   addIconx(): void {
