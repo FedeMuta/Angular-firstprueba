@@ -39,3 +39,11 @@ img {
   text-align: center;
 }
 
+p {
+  color: #070707;
+  font-size: 1.3rem;
+  font-weight: 50;
+  margin: 3vh;
+  padding: 0;
+}
+

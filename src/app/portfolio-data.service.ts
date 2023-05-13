@@ -61,8 +61,8 @@ export class PortfolioDataService {
         userId: 1,
         img: 'assets/foto-perfil.jpg',
         nombre: 'Federico',
-        apellido: 'Muta',
-        descripcion: 'Lorem ippsum  Lorem',
+        apellido: 'Leal',
+        descripcion: 'Profesional en administración y ventas en línea con habilidades en desarrollo web y conocimientos en tecnologías como HTML, CSS, JavaScript, TypeScript, Angular y SQL. Experiencia en la industria de la música y pasión por el desarrollo web. Autodidacta, aprendiz constante y capaz de adaptarme a nuevas tecnologías y entornos de trabajo.',
         ubicacion: 'Liniers, Buenos Aires, Argentina',
       },
       {
