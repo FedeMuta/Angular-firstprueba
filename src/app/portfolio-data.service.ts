@@ -8,7 +8,7 @@ import { Icono, AcercaDe, Experiencia, Estudios, Habilidades, Proyectos } from '
 export class PortfolioDataService {
   /* servicio para simular base de datos despues se encargara de controlar sus datos*/
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {}
 
   private datos = {
     /* array para simular base de datos */
@@ -67,7 +67,7 @@ export class PortfolioDataService {
       },
       {
         userId: 2,
-        img: 'assets/foto-perfil.jpg',
+        img: 'assets/agus.jpeg',
         nombre: 'Agustina',
         apellido: 'Muta',
         descripcion: 'Lorem ippsum  Lorem',
@@ -78,178 +78,182 @@ export class PortfolioDataService {
       {
         cardId: 1,
         userId: 1,
-        img: "/assets/logo sr.jpg",
-        empresa: "La Polla S.A.",
-        puesto: "Gerente E-commerce. 2016 - Presente",
-        detalles: "Encargado de la coordinación, planificación y puesta en marcha de diferentes estrategias de venta. Supervisar y analizar los diferentes sectores, sus tareas y la colaboración entre los mismos, darles herramientas para mejorar. Resolución de conflictos y reclamos. Encargado de implementar nuevas tecnologías para el desarrollo de herramientas que nos ayuden día a día. "
+        img: '/assets/logo sr.jpg',
+        empresa: 'La Polla S.A.',
+        puesto: 'Gerente E-commerce. 2016 - Presente',
+        detalles:
+          'Encargado de la coordinación, planificación y puesta en marcha de diferentes estrategias de venta. Supervisar y analizar los diferentes sectores, sus tareas y la colaboración entre los mismos, darles herramientas para mejorar. Resolución de conflictos y reclamos. Encargado de implementar nuevas tecnologías para el desarrollo de herramientas que nos ayuden día a día. ',
       },
       {
         cardId: 2,
         userId: 1,
-        img: "/assets/logo sr.jpg",
-        empresa: "La Polla S.A.",
-        puesto: "Administrativo - Ventas online. 2011 - 2016",
-        detalles: "Desarrollo y actualización de hojas de calculo y bases de datos. Creación del sector de E-commerce. Administración, supervisión, análisis, ventas, atención al cliente y envíos en E-commerce."
+        img: '/assets/logo sr.jpg',
+        empresa: 'La Polla S.A.',
+        puesto: 'Administrativo - Ventas online. 2011 - 2016',
+        detalles:
+          'Desarrollo y actualización de hojas de calculo y bases de datos. Creación del sector de E-commerce. Administración, supervisión, análisis, ventas, atención al cliente y envíos en E-commerce.',
       },
       {
         cardId: 3,
         userId: 1,
-        img: "/assets/logo sr.jpg",
-        empresa: "La Polla S.A.",
-        puesto: "Administrativo. 2008 - 2011",
-        detalles: "Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
+        img: '/assets/logo sr.jpg',
+        empresa: 'La Polla S.A.',
+        puesto: 'Administrativo. 2008 - 2011',
+        detalles:
+          'Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo',
       },
       {
         cardId: 4,
         userId: 2,
-        img: "/assets/logo sr.jpg",
-        empresa: "SENASA",
-        puesto: "Puerto. 2008 - 2011",
-        detalles: "Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo"
+        img: '/assets/logo sr.jpg',
+        empresa: 'SENASA',
+        puesto: 'Puerto. 2008 - 2011',
+        detalles:
+          'Registro contable de facturas , operaciones de cobro y pago. Desarrollo y actualización de hojas de calculo y bases de datos. Gestión de documentación. Participación en el desarrollo del sistema administrativo',
       },
     ],
     estudios: [
       {
         userId: 1,
         cardId: 1,
-        institucion: "Argentina Programa",
-        detalle: "Full Stack Developer Jr",
-        inidate: "2022",
-        endate: "Actualidad",
+        institucion: 'Argentina Programa',
+        detalle: 'Full Stack Developer Jr',
+        inidate: '2022',
+        endate: 'Actualidad',
       },
       {
         userId: 1,
         cardId: 2,
-        institucion: "Universidad Mercado Libre",
-        detalle: "Varios cursos sobre e-commerce",
-        inidate: "2015",
-        endate: "2017",
+        institucion: 'Universidad Mercado Libre',
+        detalle: 'Varios cursos sobre e-commerce',
+        inidate: '2015',
+        endate: '2017',
       },
       {
         userId: 1,
         cardId: 3,
-        institucion: "IAC",
-        detalle: "Armado y reparación de PC",
-        inidate: "2006",
-        endate: "2006",
+        institucion: 'IAC',
+        detalle: 'Armado y reparación de PC',
+        inidate: '2006',
+        endate: '2006',
       },
       {
         userId: 1,
         cardId: 4,
-        institucion: "Escuela de Bellas Artes Rogelio Yrurtia",
-        detalle: "estudios secundarios con orientación en artes plásticas.",
-        inidate: "2000",
-        endate: "2005",
+        institucion: 'Escuela de Bellas Artes Rogelio Yrurtia',
+        detalle: 'estudios secundarios con orientación en artes plásticas.',
+        inidate: '2000',
+        endate: '2005',
       },
       {
         userId: 2,
         cardId: 5,
-        institucion: "universidad de la matanza",
-        detalle: "licenciatura en filosofia de los perritos",
-        inidate: "2032",
-        endate: "2077",
+        institucion: 'universidad de la matanza',
+        detalle: 'licenciatura en filosofia de los perritos',
+        inidate: '2032',
+        endate: '2077',
       },
     ],
     skills: [
       {
         barId: 1,
         userId: 1,
-        tipo: "blanda",
-        habilidad: "Comunicación",
-        color: "celeste",
-        percent: "75",
+        tipo: 'blanda',
+        habilidad: 'Comunicación',
+        color: 'celeste',
+        percent: '75',
       },
       {
         barId: 2,
         userId: 1,
-        tipo: "blanda",
-        habilidad: "Resolución de conflictos",
-        color: "verde",
-        percent: "80",
+        tipo: 'blanda',
+        habilidad: 'Resolución de conflictos',
+        color: 'verde',
+        percent: '80',
       },
       {
         barId: 3,
         userId: 1,
-        tipo: "blanda",
-        habilidad: "Liderazgo",
-        color: "naranja",
-        percent: "70",
+        tipo: 'blanda',
+        habilidad: 'Liderazgo',
+        color: 'naranja',
+        percent: '70',
       },
       {
         barId: 4,
         userId: 1,
-        tipo: "dura",
-        habilidad: "Desarrollo Web",
-        color: "verde",
-        percent: "75",
+        tipo: 'dura',
+        habilidad: 'Desarrollo Web',
+        color: 'verde',
+        percent: '75',
       },
       {
         barId: 5,
         userId: 1,
-        tipo: "dura",
-        habilidad: "Análisis de Datos",
-        color: "rojo",
-        percent: "30",
+        tipo: 'dura',
+        habilidad: 'Análisis de Datos',
+        color: 'rojo',
+        percent: '30',
       },
       {
         barId: 6,
         userId: 1,
-        tipo: "dura",
-        habilidad: "Javascript",
-        color: "celeste",
-        percent: "70",
+        tipo: 'dura',
+        habilidad: 'Javascript',
+        color: 'celeste',
+        percent: '70',
       },
       {
         barId: 7,
         userId: 2,
-        tipo: "blanda",
-        habilidad: "leer mucho",
-        color: "rojo",
-        percent: "100",
+        tipo: 'blanda',
+        habilidad: 'leer mucho',
+        color: 'rojo',
+        percent: '100',
       },
       {
         barId: 8,
         userId: 2,
-        tipo: "dura",
-        habilidad: "tortilla de papa",
-        color: "verde",
-        percent: "70",
+        tipo: 'dura',
+        habilidad: 'tortilla de papa',
+        color: 'verde',
+        percent: '70',
       },
       {
         barId: 9,
         userId: 2,
-        tipo: "dura",
-        habilidad: "adhiestramiento canino",
-        color: "celeste",
-        percent: "70",
+        tipo: 'dura',
+        habilidad: 'adhiestramiento canino',
+        color: 'celeste',
+        percent: '70',
       },
     ],
     proyectos: [
       {
         userId: 1,
         cardId: 1,
-        nombre: "Proyecto 1",
-        descripcion: "Descripción del proyecto 1",
-        link: "#",
-        img: "https://via.placeholder.com/350x200",
-      }, 
+        nombre: 'Proyecto 1',
+        descripcion: 'Descripción del proyecto 1',
+        link: '#',
+        img: 'https://via.placeholder.com/350x200',
+      },
       {
         userId: 1,
         cardId: 2,
-        nombre: "Proyecto 2",
-        descripcion: "Descripción del proyecto 2",
-        link: "#",
-        img: "https://via.placeholder.com/350x200",
+        nombre: 'Proyecto 2',
+        descripcion: 'Descripción del proyecto 2',
+        link: '#',
+        img: 'https://via.placeholder.com/350x200',
       },
       {
         userId: 2,
         cardId: 3,
-        nombre: "Proyecto 1",
-        descripcion: "Descripción del proyecto 1",
-        link: "#",
-        img: "https://via.placeholder.com/350x200",
-      }
-    ]
+        nombre: 'Proyecto 1',
+        descripcion: 'Descripción del proyecto 1',
+        link: '#',
+        img: 'https://via.placeholder.com/350x200',
+      },
+    ],
   };
 
   arrayUpdated = new EventEmitter<any[]>();
@@ -263,7 +267,7 @@ export class PortfolioDataService {
   getIconosByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
     return this.datos.iconos.filter((icono) => icono.userId === this.userId);
-  };
+  }
 
   addIcono(icono: Icono) {
     icono.iconId = this.datos.iconos.length + 1;
@@ -271,173 +275,202 @@ export class PortfolioDataService {
     this.datos.iconos.push(icono);
     this.arrayUpdated.emit(this.datos.iconos);
     /* metodo para agregar un dato al array */
-  };
+  }
 
   deleteIcono(iconId: number) {
     /* metodo para eliminar un dato del array */
-    const index = this.datos.iconos.findIndex(icono => icono.iconId === iconId);
+    const index = this.datos.iconos.findIndex(
+      (icono) => icono.iconId === iconId
+    );
     if (index !== -1) {
       this.datos.iconos.splice(index, 1);
     }
-  };
+  }
 
   updateIcono(iconId: number, icono: Icono) {
     /* metodo para actualizar un dato del array */
-    const index = this.datos.iconos.findIndex(icono => icono.iconId === iconId);
+    const index = this.datos.iconos.findIndex(
+      (icono) => icono.iconId === iconId
+    );
     if (index !== -1) {
       this.datos.iconos[index] = icono;
     }
-  };
+  }
+
+  getImagenesByUserId() {
+    const usuarioAcercaDe = this.datos.acercaDe.find(
+      (usuario) => usuario.userId === this.userId
+    );
+    // Verificar si se encontró el usuario
+    if (usuarioAcercaDe) {
+      // Devolver la imagen del usuario
+      return usuarioAcercaDe.img;
+    } else {
+      // Usuario no encontrado
+      return null;
+    }
+  }
 
   getAcercaDeByUserId() {
     /* metodo para obtener los datos del array por id de usuario */
     return this.datos.acercaDe.filter(
       (acercaDe) => acercaDe.userId === this.userId
     );
-  };
+  }
 
   addAcercaDe(acercaDe: AcercaDe) {
     acercaDe.userId = this.userId;
     this.datos.acercaDe.push(acercaDe);
     /* metodo para agregar un dato al array */
-  };
+  }
 
   deleteAcercaDe(index: number) {
     /* metodo para eliminar un dato del array */
     this.datos.acercaDe.splice(index, 1);
-  };
+  }
 
   updateAcercaDe(userId: number, acercaDe: AcercaDe) {
     /* metodo para actualizar un dato del array */
-    const index = this.datos.acercaDe.findIndex(acerca => acerca.userId === userId);
+    const index = this.datos.acercaDe.findIndex(
+      (acerca) => acerca.userId === userId
+    );
     if (index !== -1 && this.datos.acercaDe[index].userId === userId) {
       this.datos.acercaDe[index] = acercaDe;
     }
-  };
+  }
 
-  getUbicationByUserId() { /* metodo para obtener ubicacion */
-    const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
+  getUbicationByUserId() {
+    /* metodo para obtener ubicacion */
+    const user = this.datos.acercaDe.find(
+      (acercaDe) => acercaDe.userId === this.userId
+    );
     return user ? user.ubicacion : '';
-  }; // borrar y cambiar por getAcercaDeByUserId en componente map
+  } // borrar y cambiar por getAcercaDeByUserId en componente map
 
   /* metodo para agregar ubicacion a acerca de */
   addUbicationFromUserId(ubicacion: string) {
-    const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
+    const user = this.datos.acercaDe.find(
+      (acercaDe) => acercaDe.userId === this.userId
+    );
     if (user) {
       user.ubicacion = ubicacion;
     }
-  }; // borrar y cambiar por getAcercaDeByUserId en componente map
+  } // borrar y cambiar por getAcercaDeByUserId en componente map
 
   updateUbicationFromUserId(ubicacion: string) {
-    const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
+    const user = this.datos.acercaDe.find(
+      (acercaDe) => acercaDe.userId === this.userId
+    );
     if (user) {
       user.ubicacion = ubicacion;
     }
-  }; // borrar y cambiar por getAcercaDeByUserId en componente map
+  } // borrar y cambiar por getAcercaDeByUserId en componente map
 
   deleteUbicationFromUserId() {
-    const user = this.datos.acercaDe.find(acercaDe => acercaDe.userId === this.userId);
+    const user = this.datos.acercaDe.find(
+      (acercaDe) => acercaDe.userId === this.userId
+    );
     if (user) {
       user.ubicacion = '';
     }
-  }; // borrar y cambiar por getAcercaDeByUserId en componente map
+  } // borrar y cambiar por getAcercaDeByUserId en componente map
 
   getExperienciaByUserId() {
     return this.datos.experiencia.filter(
       (experiencia) => experiencia.userId === this.userId
     );
-  };
+  }
 
   addExperiencia(experiencia: Experiencia) {
-    experiencia.cardId = (this.datos.experiencia.length + 1);
+    experiencia.cardId = this.datos.experiencia.length + 1;
     experiencia.userId = this.userId;
     this.datos.experiencia.push(experiencia);
-  };
+  }
 
   deleteExperiencia(cardId: number) {
     this.datos.experiencia = this.datos.experiencia.filter(
       (experiencia) => experiencia.cardId !== cardId
     );
-  };
+  }
 
   updateExperiencia(cardId: number, experiencia: Experiencia) {
     const index = this.datos.experiencia.findIndex(
       (experiencia) => experiencia.cardId === cardId
     );
     this.datos.experiencia[index] = experiencia;
-  };
+  }
 
   getEstudiosByUserId() {
-    return this.datos.estudios.filter((estudio) => estudio.userId === this.userId);
-  };
+    return this.datos.estudios.filter(
+      (estudio) => estudio.userId === this.userId
+    );
+  }
 
   addEstudio(estudio: Estudios) {
-    estudio.cardId = (this.datos.estudios.length + 1);
+    estudio.cardId = this.datos.estudios.length + 1;
     estudio.userId = this.userId;
     this.datos.estudios.push(estudio);
-  };
+  }
 
   deleteEstudio(cardId: number) {
     this.datos.estudios = this.datos.estudios.filter(
       (estudio) => estudio.cardId !== cardId
     );
-  };
+  }
 
   updateEstudio(cardId: number, estudio: Estudios) {
     const index = this.datos.estudios.findIndex(
       (estudio) => estudio.cardId === cardId
     );
     this.datos.estudios[index] = estudio;
-  };
+  }
 
   getHabilidadesByUserId() {
     return this.datos.skills.filter(
       (habilidad) => habilidad.userId === this.userId
     );
-  };
+  }
 
   addHabilidad(habilidad: Habilidades) {
     habilidad.userId = this.userId;
     this.datos.skills.push(habilidad);
-  };
+  }
 
   deleteHabilidad(barId: number) {
     this.datos.skills = this.datos.skills.filter(
       (habilidad) => habilidad.barId !== barId
     );
-  };
+  }
 
   updateHabilidad(barId: number, habilidad: Habilidades) {
     const index = this.datos.skills.findIndex(
       (habilidad) => habilidad.barId === barId
     );
     this.datos.skills[index] = habilidad;
-  };
+  }
 
   getProyectosByUserId() {
     return this.datos.proyectos.filter(
       (proyecto) => proyecto.userId === this.userId
     );
-  };
+  }
 
   addProyecto(proyecto: Proyectos) {
-    proyecto.cardId = (this.datos.proyectos.length + 1);
+    proyecto.cardId = this.datos.proyectos.length + 1;
     proyecto.userId = this.userId;
     this.datos.proyectos.push(proyecto);
-  };
+  }
 
   deleteProyecto(cardId: number) {
     this.datos.proyectos = this.datos.proyectos.filter(
       (proyecto) => proyecto.cardId !== cardId
     );
-  };
+  }
 
   updateProyecto(cardId: number, proyecto: Proyectos) {
     const index = this.datos.proyectos.findIndex(
       (proyecto) => proyecto.cardId === cardId
     );
     this.datos.proyectos[index] = proyecto;
-  };
+  }
 }
-
-

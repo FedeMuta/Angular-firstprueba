@@ -9,12 +9,16 @@ import { PortfolioDataService } from '../portfolio-data.service';
 })
 export class HeaderComponent {
 
-  fotoPerfil: string | null = null; /* variable para almacenar la foto del icono al loguearse */
+  fotoPerfil = this.getFotoPerfil(); /* variable para almacenar la foto del icono al loguearse */
   mostrarLogin: Boolean = false; /* variable para mostrar el formulario de logueo */
   mostrarEdit: Boolean = false; /* variable para mostrar iconos de edicion*/
   addEdit: Boolean = false; /* variable para mostrar el formulario de edicion */
 
   constructor(private authService: AuthService, private dataService: PortfolioDataService) { }
+
+  getFotoPerfil() { /* funcion para obtener la foto del icono al loguearse */
+    return this.dataService.getImagenesByUserId();
+  }
 
   isLogged(): boolean { /* funcion para saber si el usuario esta logueado */
     return this.dataService.isLoggedIn();
