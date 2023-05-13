@@ -5,21 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  /* servicio para simular el inicio de sesión */
+  /* servicio para el inicio de sesión */
   constructor(private http: HttpClient) {}
-
-  usuarios = [
-    {
-      userId: 1,
-      email: 'Fede',
-      password: 'password',
-    },
-    {
-      userId: 2,
-      email: 'Agustina',
-      password: 'passworD',
-    },
-  ]; /* array de usuarios */
 
   private userId: number | null = null; /* id de usuario */
 
@@ -30,11 +17,11 @@ export class AuthService {
     };
 
     return this.http
-      .post('http://localhost:8080/login', loginData)
+      .post('https://backend-portfolio-x6j6.onrender.com/login', loginData)
       .toPromise()
       .then((response: any) => {
         if (response && response.token) {
-          localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('isLoggedIn', 'true'); /* guarda en el localStorage el item isLoggedIn con valor true */
           localStorage.setItem('userId', response.userId.toString());
           this.userId = response.userId;
           return true;
