@@ -12,6 +12,8 @@ contraseña: passworD
 **Comentarios**
 - Al loguearse por primera vez tener paciencia hasta que carga el back end, una vez cargado pueden probar los distintos usuarios. Es recomendable abrir este link y esperar a que se cargue la pagina para saber que el back ya esta corriendo: https://backend-portfolio-x6j6.onrender.com
 
+- Al cargar la pagina algunas veces en la seccion donde aparecen los datos del usuario no se llega a cargar el mapa de google a la derecha, y aparece un error en consola que todavia no logro arreglar. Si no se carga el mapa tan solo hay que actualizar la pagina con F5 para que se cargue. 
+
 - El front-end por ahora solo se comunica con el back-end para el inicio de sesion mediante el AuthService, donde verifica el usuario para habilitar la edicion, son los unicos endpoints operativos por el momento. Desde postman se pueden ver los usuarios, crearlos, actualizarlos y eliminarlos. Me falto tiempo para poder hacerlo bien, es muy simple, pero queria dejarlo funcionando.
 
 - Por el momento los datos los saco de un array que simula la base de datos, se encuentra en el PortfolioDataService, que es el serivicio encargado de manejar los datos. No llegue a modificarlo pero lo voy a hacer, la idea es que este servicio sea el que se comunique con el back una vez obtenido el Id del usuario conectado, capture los elementos de ese usuario en arrays y los demas componentes los pidan. Cualquier modificacion la guarda en su respectivo array y la envia a la base de datos. La otra opcion es que vaya consultando a la base de datos a medida que los componentes los requieran.
