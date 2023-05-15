@@ -7,28 +7,43 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 7.3vh;
+  min-height: 7.3vh;
+}
+
+.logo-group {
+  flex-wrap: wrap;
 }
 
 #logo_inti {
+  height: 7vh;
   max-height: 7.5vh;
-  width: auto;
-  object-fit: contain;
+  min-height: 5vh;
 }
 
 #logo_ap {
+  height: 7vh;
   max-height: 9vh;
-  width: auto;
-  object-fit: contain;
+  min-height: 5vh;
+
 }
 
 /* Iconos redes sociales */
+
+button {
+  color: white;
+  background-color: white;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
 
 .icon-group {
   display: flex;
   align-items: center;
   filter: invert(100%);
   object-fit: contain;
+  justify-content: flex-end;
 }
 
 #logo_in {
