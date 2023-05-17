@@ -18,10 +18,6 @@ export class ProgressbarComponent {
 
   habilidades = this.getHabilidades();
 
-  isLogged() {
-    return this.dataService.isLoggedIn();
-  }
-
   getHabilidades() {
     return this.dataService.getHabilidadesByUserId();
   }

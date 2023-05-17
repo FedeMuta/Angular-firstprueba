@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
 import { Estudios } from 'src/app/interfaces';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-cardst',
@@ -20,10 +19,6 @@ export class CardstComponent {
 
   estudios = this.getEstudios();
 
-  isLogged() {
-    return this.dataService.isLoggedIn();
-  }
-
   getEstudios() {
     return this.dataService.getEstudiosByUserId();
   }
@@ -39,9 +34,4 @@ export class CardstComponent {
   updateEstudio(cardID: number, estudio: Estudios) {
     this.dataService.updateEstudio(cardID, estudio);
   }
-
-  drop(event: CdkDragDrop<any[]>) {
-    moveItemInArray(this.estudios, event.previousIndex, event.currentIndex);
-  }
-
 }

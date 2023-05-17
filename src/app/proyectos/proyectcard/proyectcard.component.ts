@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PortfolioDataService } from 'src/app/portfolio-data.service';
 import { Proyectos } from 'src/app/interfaces';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-proyectcard',
@@ -19,10 +18,6 @@ export class ProyectcardComponent {
 
   constructor(public dataService: PortfolioDataService) { }
 
-  isLogged() {
-    return this.dataService.isLoggedIn();
-  };
-
   getProyectos() {
     return this.dataService.getProyectosByUserId();
   };
@@ -37,9 +32,5 @@ export class ProyectcardComponent {
 
   updateProyecto(cardId: number, proyecto: Proyectos) {
     this.dataService.updateProyecto(cardId, proyecto);
-  };
-
-  drop(event: CdkDragDrop<any[]>) {
-    moveItemInArray(this.proyectos, event.previousIndex, event.currentIndex);
   };
 }
