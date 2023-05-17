@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 1vh;
+  margin: 0.5vh;
   padding: 1vh;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -88,3 +88,9 @@ button:active {
   background-color: #686868;
   color: #fff;
 } 
+
+@media only screen and (max-width: 600px) {
+  .icon-name {
+    display: none;
+  }
+}

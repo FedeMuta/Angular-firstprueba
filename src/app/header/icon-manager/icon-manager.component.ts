@@ -12,10 +12,11 @@ export class IconManagerComponent {
   constructor(private dataService: PortfolioDataService) { };
 
   possibleIcons: Icono[] = [
-    { userId: 0 , iconId: 0, img: 'assets/bxl-instagram.svg', name: 'Instagram', link: 'https://www.instagram.com/'},
-    { userId: 0, iconId: 0, img: 'assets/bxl-github.svg', name: 'GitHub', link: 'https://github.com/'},
-    { userId: 0, iconId: 0, img: 'assets/bxl-gmail.svg', name: 'Mail', link: 'mailto: '},
-    { userId: 0, iconId: 0, img: 'assets/bxl-whatsapp.svg', name: 'Whatsapp', link: 'https://web.whatsapp.com/send?phone='},
+    { userId: 0, iconId: 0, img: 'assets/bxl-linkedin.svg', name: 'Linkedin', link: ''},
+    { userId: 0, iconId: 0, img: 'assets/bxl-github.svg', name: 'GitHub', link: ''},
+    { userId: 0, iconId: 0, img: 'assets/bxl-gmail.svg', name: 'Mail', link: ''},
+    { userId: 0, iconId: 0, img: 'assets/bxl-whatsapp.svg', name: 'Whatsapp', link: ''},
+    { userId: 0 , iconId: 0, img: 'assets/bxl-instagram.svg', name: 'Instagram', link: ''},
   ];
 
   selectedIcono: any = this.possibleIcons[0];

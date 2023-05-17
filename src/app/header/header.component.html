@@ -63,10 +63,19 @@
               title="Editar iconos"
             />
             <img
-              *ngIf="mostrarEdit"
+              *ngIf="mostrarEdit && !addEdit"
               (click)="addIconx()"
               id="logoadd"
               src="assets/bx-plus-circle.svg"
+              class="img-fluid"
+              alt="agregar icono"
+              title="agregar icono"
+            />
+            <img
+              *ngIf="mostrarEdit && addEdit"
+              (click)="addIconx()"
+              id="logoadd"
+              src="assets/bx-minus-circle.svg"
               class="img-fluid"
               alt="agregar icono"
               title="agregar icono"
