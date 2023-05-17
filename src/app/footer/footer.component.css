@@ -1,9 +1,18 @@
-* {
-  padding: 0%;
-  margin: 0%;
-}
-
 footer {
   background-color: #000000;
   height: 7.3vh;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+footer p {
+  color: #ffffff;
+  text-align: center;
+}
+
+img {
+  filter: invert(100%);
+  rotate: 180deg;
+  height: 2vh;
 }
